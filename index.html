@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WWO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container-fluid menu-container">
+    <div class="container w1170">
+      <nav class="navbar navbar-expand-sm menu">
+        <!-- Logo -->
+        <a class="navbar-brand logo" href="#"><img src="img/logo-wwo.png" alt=""></a>
+        <button class="navbar-toggler top-toggler" type="button" data-toggle="collapse" data-target="#top-menu" aria-controls="top-menu" aria-expanded="true" aria-label="Toggle navigation">
+          <img class="burger" src="img/burger.svg" alt="">
+        </button>   
+        <!-- Top Menu -->
+        <div class="navbar-collapse collapse" id="top-menu" style="">
+          <ul class="navbar-nav mr-auto top-menu">
+            <li class="nav-item top-menu-item">
+              <a class="nav-link top-menu-link" href="#">Weather</a>
+            </li>
+            <li class="nav-item top-menu-item">
+              <a class="nav-link top-menu-link" href="#">Hourly</a>
+            </li>
+            <li class="nav-item top-menu-item">
+              <a class="nav-link top-menu-link" href="#">History</a>
+            </li>
+            <li class="nav-item top-menu-item">
+              <a class="nav-link top-menu-link" href="#">Widgets</a>
+            </li>
+            <li class="nav-item top-menu-item">
+              <a class="nav-link top-menu-link" href="#">API</a>
+            </li>
+          </ul>
+          
+
+          <!-- Burger -->
+          <div class="btn-group burger-group" role="group" aria-label="Button group with nested dropdown">
+            <button id="btnGroupDrop1" type="button" class="btn top-toggler" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img class="burger" src="img/burger.svg" alt="">
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupDrop1">
+              <a class="dropdown-item" href="#">Weather</a>
+              <a class="dropdown-item" href="#">Hourly</a>
+              <a class="dropdown-item" href="#">History</a>
+              <a class="dropdown-item" href="#">Widgets</a>
+              <a class="dropdown-item" href="#">API</a>
+            </div>
+          </div>              
+        </div>
+      </nav>
+          <!-- Settings modal -->
+          <button type="button" class="btn btn-settings" data-toggle="modal" data-target="#settings">
+            <img class="settings" src="img/sett-f.svg" alt="">
+          </button>
+          <div class="modal fade" id="settings" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-body settings-body">
+                  <div class="settings-body-item">
+                    <p class="sett">Temperature</p>
+                    <div class="btn-group" role="group" aria-label="sett-temp">
+                      <button type="button" class="btn btn-secondary sett-btn">°F</button>
+                      <button type="button" class="btn btn-secondary sett-btn">°C</button>
+                    </div>
+                  </div>
+                  <div class="settings-body-item">
+                    <p class="sett">Wind</p>
+                    <div class="btn-group" role="group" aria-label="sett-temp">
+                      <button type="button" class="btn btn-secondary sett-btn">M/S</button>
+                      <button type="button" class="btn btn-secondary sett-btn">MP/H/button>
+                      <button type="button" class="btn btn-secondary sett-btn">KP/H</button>
+                    </div>
+                  </div>
+                  <div class="settings-body-item">
+                    <p class="sett">Language</p>
+                    <div class="btn-group" role="group">
+                      <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        ENG
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" href="#">RUS</a>
+                        <a class="dropdown-item" href="#">BEL</a>
+                      </div>
+                    </div>                
+                  </div>
+                  <div class="settings-body-item">
+                    <p class="sett">Time(Hours)</p>
+                    <div class="btn-group" role="group" aria-label="sett-temp">
+                      <button type="button" class="btn btn-secondary sett-btn">12</button>
+                      <button type="button" class="btn btn-secondary sett-btn">24</button>
+                    </div>
+                  </div>
+                  <div class="settings-body-item">
+                    <p class="sett">Precipitation</p>
+                    <div class="btn-group" role="group" aria-label="sett-temp">
+                      <button type="button" class="btn btn-secondary sett-btn">INCH</button>
+                      <button type="button" class="btn btn-secondary sett-btn">MM</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Settings modal end -->
+      <form class="form-inline my-2 my-md-0 top-menu-search">
+        <input class="form-control search-input" type="text" placeholder="Search">
+      </form>
+    </div>
+  </div>
+
+  <div class="container-fluid weather-container">
+    <div class="container w1170">
+      <nav class="navbar navbar-expand weather-menu">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="weather-menu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="weather-menu">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown weather-menu-item">
+              <a class="nav-link  weather-menu-link" href="#" id="city1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manchester, UK 18°C <span class="weather-icon"><img src="img/cloud.svg" alt=""></span><span href="#" class="close-icon"><img src="img/close.svg" alt=""></span ></a>
+              <div class="dropdown-menu city-weather" aria-labelledby="city1">
+                <div class="dropdown-item city-weather-item" href="#">
+                  <div class="city-time">Morning</div>
+                  <div class="city-temperature">12°C</div>
+                  <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                </div>
+                <div class="dropdown-item city-weather-item" href="#">
+                  <div class="city-time">Day</div>
+                  <div class="city-temperature">12°C</div>
+                  <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                </div>
+                <div class="dropdown-item city-weather-item" href="#">
+                  <div class="city-time">Evening</div>
+                  <div class="city-temperature">12°C</div>
+                  <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                </div>
+                <div class="dropdown-item city-weather-item" href="#">
+                  <div class="city-time">Night</div>
+                  <div class="city-temperature">12°C</div>
+                  <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
