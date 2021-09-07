@@ -82,10 +82,49 @@ body {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
+    width: 604px;
+    height: 198px;
+    background: #FFFFFF;
+    box-shadow: 0px 15px 15px rgba(53, 58, 62, 0.1);
+    border-radius: 5px;
+    padding: 20px 40px;
 }
 .settings-body-item {
-    width: 30%;
+    margin-right: 50px;;
 }
+.sett {
+    font-size: 14px;
+    line-height: 19px;
+    color: #9A9A9A;
+    margin-bottom: 10px;
+}
+.sett-btn {
+    background: #F2F2F2;
+    width: 61px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: #9A9A9A;
+    border: none;
+}
+.sett-btn-primary {
+    background: #4D9335;
+    color: #ffffff;
+}
+.sett-btn:active, .sett-btn:focus, .sett-btn:hover, .curr-lang:active, .curr-lang:focus, .curr-lang:hover {
+    border: 0;
+    box-shadow: none;
+    background-color: #4D9335;
+}
+.curr-lang::after {
+    display: inline-block;
+    content: "";
+    background-image: url(../img/arrow-down.svg);
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+}
+
 .top-menu-search {
     position: absolute;
     top: 10px;
@@ -102,18 +141,21 @@ body {
     padding-top: 8px;
     padding-bottom: 7px;
 }
+.weather-menu-link:hover {
+    color: #1F1F1F; 
+}
 .weather-menu-link:after {
     display: block;
 	position: absolute;
     bottom: 0;
 	left: 0; 
 	width: 0;
-	height: 2px; 
-	background-color: #4D9335; /*задаём цвет линии*/
+	height: 1px; 
+	background-color: #4D9335;
 	content: "";
 	transition: width 0.3s ease-out;
 }
-.weather-menu-link:focus:after, .weather-menu-link:hover:after {
+.weather-menu-link:focus:after, .weather-menu-link:hover:after, .weather-menu-link:active:after {
     width: 80%;
 }
 .navbar-expand .navbar-nav .weather-menu-link {
@@ -132,16 +174,36 @@ body {
     padding: 0;
     margin: 3px 0 0;
 }
+nav.navbar .dropdown:hover > .city-weather {
+    display: block; 
+} 
+@media only screen and (max-device-width: 992px){
+    nav.navbar .dropdown:hover .city-weather {
+        display: none;
+    }
+}
 .city-weather-item {
     display: flex;
     align-items: flex-start;
     flex-wrap: nowrap;
-    padding: 10px 9px;
+    padding: 11px 9px 7px 9px;
     font-size: 14px;
     line-height: 19px;
     color: #353A3E;
-    border-bottom: 1px solid #919191;
+
 }
+/*.city-weather-item:not(:nth-last-child(-n+2)) {
+    border-bottom: 1px solid #f2f2f2;    
+}*/
+.weather-divider {
+    margin: 0 9px;
+}
+.city-weather-more {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .city-time {
     width: 62%;
 }
