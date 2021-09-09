@@ -20,7 +20,11 @@ body {
 .weather-container {
     background-color: #fff;
 }
-
+.box {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+}
 .menu {
     background-color: #353A3E;
     padding: 0;
@@ -53,16 +57,16 @@ body {
     padding: 0px 0px;
 }
 .search-input {
-  font-size: 14px;
-  line-height: 19px;
-  color: #222222;
-  width: 352px !important;
-  background: #ffffff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
-  border-radius: 3px;
-  background-image: url(../img/search-icon.svg);
-  background-repeat: no-repeat;
-  background-position: right 12px center;
+    font-size: 14px;
+    line-height: 19px;
+    color: #222222;
+    width: 352px !important;
+    background: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+    background-image: url(../img/search-icon.svg);
+    background-repeat: no-repeat;
+    background-position: right 12px center;
 }
 .search-input::placeholder {
     color: #9A9A9A;
@@ -244,6 +248,7 @@ nav.navbar .dropdown:hover > .city-weather {
 .breads {
     background-color: #E5E5E5; 
     padding: 0 0 24px 0;
+    margin-bottom: 20px;
     border-bottom: 1px solid #9A9A9A; 
     font-size: 14px;
     line-height: 19px;
@@ -255,16 +260,88 @@ nav.navbar .dropdown:hover > .city-weather {
 .breadcrumb-item.active {
     color: #9A9A9A; 
 }
+.main {
+    padding-right: 8px!important;
+}
+.aside {
+    flex: 0 0 25.7%;
+    max-width: 25.7%;
+}
+.head2 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    color: #353A3E;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(34,34,34,.1);
+}
+.head3 {
+    font-size: 24px;
+    line-height: 33px;
+    color: #222222;
+}
+.weather-now-city {
+    padding: 20px 22px 16px;
+}
+.weather-now-uv {
+    padding: 23px 20px 24px;
+    margin-bottom: 10px;
+}
+.progress {
+    height: 16px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 19px;
+    color: #9A9A9A;
+    background-color: #fff;
+    border-radius: .25rem;
+}
+.day-uv {
+    width: 40px;
+}
+.uv-scale-hr {
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: 9px;
+    margin-bottom: 11px;
+    border: 0;
+    border-top: 1px solid rgba(34,34,34,.1);
+}
+.uv-scale-img {
+    width: 245px;
+    height: 31px;
+}
+.weather-now-holiday {
+    padding: 23px 20px 18px;
+    text-align: center;
+}
+.holiday-img {
+    width: 242px;
+    height: 84px;
+}
+.holiday {
+    margin-top: 26px;
+    margin-bottom: 0;
 
+}
 
 @media (max-width: 768px) {
+    .weather-container {
+        display: none;
+    }
     .btn-settings {
         right: 50px;
     }
     .top-menu-search {
         display: none;
     }
+    .col-md-3 {
+        flex: 0 0 25.7%;
+        max-width: 25.7%;
+    }
 }
+
+
 @media (max-width: 576px) {
     .burger-group {
         display: none;
