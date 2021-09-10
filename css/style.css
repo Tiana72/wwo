@@ -481,9 +481,13 @@ nav.navbar .dropdown:hover > .city-weather {
     .top-menu-search {
         display: none;
     }
-    .col-md-3 {
-        flex: 0 0 25.7%;
-        max-width: 25.7%;
+    .aside {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .main {
+        padding-right: 0px!important;
+        padding-bottom: 10px;
     }
 }
 
