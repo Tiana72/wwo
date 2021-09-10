@@ -1,5 +1,3 @@
-
-
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
@@ -13,7 +11,7 @@ p {
     margin-bottom: 0;
 }
 section {
-    margin-bottom: 20px;
+    margin-bottom: 3px;
 }
 .w1170 {
     position: relative;
@@ -30,6 +28,13 @@ section {
     background: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
     border-radius: 5px;
+    padding: 25px 21px;
+    margin-bottom: 17px;
+}
+.box-rec {
+    display: grid;
+    place-content: center;
+    min-height: 100px;
 }
 .menu {
     background-color: #353A3E;
@@ -150,6 +155,12 @@ section {
     top: 10px;
     right: 63px;
 }
+input[type="search"]::-ms-clear { /* нестандартный псевдоэлемент IE */ 
+    display: none;
+  }
+input[type="search"]::-webkit-search-cancel-button { /* нестандартный псевдоэлемент WebKit/Blink, но Esc по-прежнему будет удалять раннее введённый текст */ 
+    display: none;
+  }
 .weather-menu {
     padding: 0;
 }
@@ -158,7 +169,7 @@ section {
     letter-spacing: 0.3px;
     line-height: 19px;
     color: #1F1F1F;
-    padding-top: 8px;
+    padding-top: 10px;
     padding-bottom: 7px;
 }
 .weather-menu-link:hover {
@@ -212,7 +223,6 @@ nav.navbar .dropdown:hover > .city-weather {
     color: #353A3E;
 
 }
-
 .weather-divider {
     margin: 0 9px;
 }
@@ -232,6 +242,8 @@ nav.navbar .dropdown:hover > .city-weather {
 .city-weather-icon {
     width: 16%;
 }
+
+
 .main-rec {
     width: 100%;
     height: 360px;
@@ -241,6 +253,7 @@ nav.navbar .dropdown:hover > .city-weather {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
+/* Breadcrumbs */
 .breadcrumb-item + .breadcrumb-item::before {
     display: block;
     content: ' ';
@@ -267,20 +280,14 @@ nav.navbar .dropdown:hover > .city-weather {
 .breadcrumb-item.active {
     color: #9A9A9A; 
 }
-.main {
-    padding-right: 8px!important;
-}
+
+/* Aside box - UV Index */
 .aside {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     flex: 0 0 25.7%;
     max-width: 25.7%;
-}
-.head2 {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 33px;
-    color: #353A3E;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(34,34,34,.1);
 }
 .head3 {
     font-size: 24px;
@@ -331,6 +338,19 @@ nav.navbar .dropdown:hover > .city-weather {
 .holiday {
     margin-top: 26px;
     margin-bottom: 0;
+}
+
+/* Box weather now */
+.main {
+    padding-right: 8px!important;
+}
+.head2 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    color: #353A3E;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(34,34,34,.1);
 }
 .weather-summary {
     display: flex;
@@ -392,6 +412,30 @@ nav.navbar .dropdown:hover > .city-weather {
     margin-left: 2px;
     margin-right: 4px;
 }
+.wind-direction {
+    display: inline;
+    width: 42px;
+    height: 23px;
+    border: 1px solid #222222;
+    box-sizing: border-box;
+    border-radius: 50px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    vertical-align: middle;
+}
+.wind-direction span.wind {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #343434;
+    padding-left: 6px;
+}
+.wind-direction img {
+    padding-left: 5px;
+    padding-right: 8px;
+    padding-bottom: 1px;
+    transform: rotate(0deg);
+}
 .ws-details-item span {
     font-weight: bold;
 }
@@ -412,7 +456,7 @@ nav.navbar .dropdown:hover > .city-weather {
     padding-top: 3px;
 }
 .ws-details-hr {
-    margin-top: 7px;
+    margin-top: 11px;
     margin-bottom: 16px;
     border: 0;
     border-top: 1px solid rgba(34,34,34,.1);
@@ -475,6 +519,89 @@ nav.navbar .dropdown:hover > .city-weather {
     color: rgba(51, 51, 51, 0.6);
     margin-top: 17px;
 }
+
+/* Box Report */
+.report {
+    padding-bottom: 45px;
+}
+h4.report-header {
+    font-size: 28px;
+    line-height: 38px;
+    color: #222222;
+    margin-bottom: 20px;
+}
+.report-text {
+    font-size: 16px;
+    line-height: 26px;
+    color: #C4C4C4;
+    opacity: 0.6;
+    margin-bottom: 27px;
+}
+
+/* placeholders */
+.placeholder-box {
+    padding: 0;
+}
+
+/* Box holiday */
+h4.holiday-header {
+    font-size: 28px;
+    line-height: 38px;
+    color: #222222;
+    margin-bottom: 20px;
+}
+h5.holiday-header {
+    font-size: 20px;
+    line-height: 26px;
+    color: #222222;
+    margin-bottom: 15px;
+}
+p.holiday-text {
+    font-size: 16px;
+    line-height: 26px;
+    color: #222222;
+    opacity: 0.6;
+    margin-bottom: 33px;
+}
+.common {
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+    background: #4D9335;
+    border: 0;
+    outline: 0;
+    border-radius: 3px;
+    padding: 7px 15px;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.05));
+}
+.common:focus {
+    outline: 0;
+}
+
+/* Box blog */
+h4.blog-header {
+    font-size: 28px;
+    line-height: 38px;
+    color: #222222;
+    margin-bottom: 20px;
+}
+a.blog-link {
+    font-size: 20px;
+    line-height: 26px;
+    color: #0645AD;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+p.blog-text {
+    font-size: 16px;
+    line-height: 26px;
+    color: #222222;
+    opacity: 0.6;
+    margin-bottom: 33px;
+}
+
+
+
 @media (max-width: 768px) {
     .weather-container {
         display: none;
