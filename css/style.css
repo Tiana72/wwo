@@ -259,6 +259,7 @@ nav.navbar .dropdown:hover > .city-weather {
     font-size: 14px;
     line-height: 19px;
     color: #9A9A9A; 
+    border-radius: 0;
 }
 .breadcrumb-item a {
     color: #9A9A9A; 
@@ -300,7 +301,9 @@ nav.navbar .dropdown:hover > .city-weather {
     line-height: 19px;
     color: #9A9A9A;
     background-color: #fff;
-    border-radius: .25rem;
+}
+.progress-bar {
+    border-radius: 0 7px 7px 0;
 }
 .day-uv {
     width: 40px;
@@ -335,6 +338,7 @@ nav.navbar .dropdown:hover > .city-weather {
 }
 .weather-summary-details {
     flex-grow: 1;
+    flex-wrap: wrap;
 }
 .weather-widget {
     display: flex;
