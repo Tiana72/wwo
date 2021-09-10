@@ -304,6 +304,7 @@
     </div>
   </header>
 
+ <!-- Weather now   -->
   <section>
     <div class="container w1170">
       <div class="row no-gutters">
@@ -324,7 +325,7 @@
               <div class="weather-summary-details">
                 <div class="ws-details">
                   <div class="ws-details-item">
-                    Wind: <span class="wind-speed">18 KM/H</span><div class="wind-direction"><span class="wind">W</span><img src="img/wind-direction.svg" alt="" class="wind-arrow" style="transform: rotate(0deg);"></div>
+                    Wind: <span class="wind-speed">18 KM/H</span><div class="wind-direction"><span class="wind">SW</span><img src="img/wind-direction.svg" alt="" class="wind-arrow" style="transform: rotate(45deg);"></div>
                   </div>
                   <div class="ws-details-item">Rain: <span>67%</span></div>
                   <div class="ws-details-item">Cloud: <span>100%</span></div>
@@ -430,13 +431,104 @@
     </div>
   </section>
 
+ <!-- Forecast for 10 days -->  
   <section>
     <div class="container w1170">
       <div class="row no-gutters">
         <div class="col main">
-          <div class="box">
-            Forecast for 10 days
+          <div class="box forecast-box">
+            <div class="forecast-menu">
+              <a href="" class="forecast-menu-item forecast-menu-item-current">10 days weather</a>
+              <a href="" class="forecast-menu-item">Hourly weather</a>
+              <a href="" class="forecast-menu-item">History</a>
+              <a href="" class="forecast-menu-item">Days</a>
+              <a href="" class="forecast-menu-item ">Averages</a>
+              <a href="" class="forecast-menu-item forecast-menu-item-alert">Weather alerts!</a>
+              <a href="" class="forecast-menu-item">Weather maps <img src="img/maps-logo.png" width="15" height="17" alt=""></a>
+            </div>
+            <h3 class="forecast">Forecast for 10 days</h3>
+            <div class="wrapper">
+              <div class="forecast-card">
+                <div class="forecast-card-item forecast-card-item-orange">
+                  <div class="forecast-card-item-weather">
+                    <div class="forecast-card-item-weather-icon">
+                      <img src="img/sun-cloud.svg" height="31" width="38"  alt="">
+                    </div>
+                    <div class="forecast-card-item-weather-temp">
+                      <p>32 °C<span>6 °C</span></p>
+                    </div>
+                  </div>
+                  <div class="day current">Today</div>
+                  <span>27 Jul</span>
+                </div>
+                <div class="forecast-card-item forecast-card-item-tomorrow forecast-card-item-red">
+                  <div class="forecast-card-item-weather">
+                    <div class="forecast-card-item-weather-icon">
+                      <img src="img/sun-cloud.svg" height="31" width="38"  alt="">
+                    </div>
+                    <div class="forecast-card-item-weather-temp">
+                      <p>32 °C<span>6 °C</span></p>
+                    </div>
+                  </div>
+                  <div class="day">Tomorrow</div>
+                  <span>27 Jul</span>
+                </div>
+                <div class="forecast-card-item">
+                  <div class="forecast-card-item-weather">
+                    <div class="forecast-card-item-weather-icon">
+                      <img src="img/sun-cloud.svg" height="31" width="38"  alt="">
+                    </div>
+                    <div class="forecast-card-item-weather-temp">
+                      <p>32 °C<span>6 °C</span></p>
+                    </div>
+                  </div>
+                  <div class="day">Wednesday</div>
+                  <span>27 Jul</span>
+                </div>
+                <div class="forecast-card-item">
+                  <div class="forecast-card-item-weather">
+                    <div class="forecast-card-item-weather-icon">
+                      <img src="img/sun-cloud.svg" height="31" width="38"  alt="">
+                    </div>
+                    <div class="forecast-card-item-weather-temp">
+                      <p>32 °C<span>6 °C</span></p>
+                    </div>
+                  </div>
+                  <div class="day">Tuesday</div>
+                  <span>27 Jul</span>
+                </div>
+                <div class="forecast-card-item">
+                  <div class="forecast-card-item-weather">
+                    <div class="forecast-card-item-weather-icon">
+                      <img src="img/sun-cloud.svg" height="31" width="38"  alt="">
+                    </div>
+                    <div class="forecast-card-item-weather-temp">
+                      <p>32 °C<span>6 °C</span></p>
+                    </div>
+                  </div>
+                  <div class="day">Saturday</div>
+                  <span>27 Jul</span>
+                </div>
+                <div class="forecast-card-item">
+                  <div class="forecast-card-item-weather">
+                    <div class="forecast-card-item-weather-icon">
+                      <img src="img/sun-cloud.svg" height="31" width="38"  alt="">
+                    </div>
+                    <div class="forecast-card-item-weather-temp">
+                      <p>32 °C<span>6 °C</span></p>
+                    </div>
+                  </div>
+                  <div class="day">Tomorrow</div>
+                  <span>27 Jul</span>
+                </div>
+              </div>
+              <div class="arrow">
+                <a href=""><img src="img/green-arrow.svg" width="21" alt=""></a>
+              </div>
+            </div>
+            <img src="img/10days.png" alt="" style="margin-bottom: 18px;">
           </div>
+          
           <div class="box report">
             <h4 class="report-header">Weekly Weather Report for Hrodna, Belarus</h4> 
             <p class="report-text">Looking at the weather in Hrodna, Belarus over the next 7 days, the maximum temperature will be 16℃ (or 60℉) on Friday 24th April at around 2 pm. In the same week the minimum temperature will be 1℃ (or 33℉) on Monday 27th April at around 5 am.</p>
@@ -459,6 +551,7 @@
     </div>
   </section>
 
+ <!-- 15 days and other -->  
   <section>
     <div class="container w1170">
       <div class="row no-gutters">
@@ -476,7 +569,7 @@
             <p class="holiday-text">Summer comes to Prague in June and ends in August. The average temperature high ranges between 20 degrees Celsius and 23 degrees Celsius with night time lows that average between 10 and 11 degrees Celsius. The summer months may be the hottest months in Prague but they are also the wettest months with between 60mm and 80mm of rain falling each month during <br />the summer.</p>
             <h5 class="holiday-header">Autumn</h5>
             <p class="holiday-text">Summer comes to Prague in June and ends in August. The average temperature high ranges between 20 degrees Celsius and 23 degrees Celsius with night time lows that average between 10 and 11 degrees Celsius. The summer months may be the hottest months in Prague but they are also the wettest months with between 60mm and 80mm of rain falling each month during <br />summer.</p>
-            <button class="common">See more</button>
+            <a href="" class="common">See more</a>
           </div>
           <div class="box box-rec">AD</div>
           <div class="box blog-box">
@@ -492,7 +585,7 @@
             <a href="#" class="blog-link">Ruined architecture of Greece: remains of history</a> 
             <p class="blog-text">Prague has a marine west coast climate and as such experiences rain all year round. Prague also experiences four distinct seasons of spring, summer, autumn and winter. Though there is a difference between the amount of rainfall for each month on average, the number of days that it rains per month is fairly consistent with around 12 days experiencing rain every month</p>
 
-            <button class="common">See more</button>
+            <a href="" class="common">See more</a>
           </div>
         </div>
         <div class="col-md-3 aside">
@@ -510,11 +603,7 @@
     </div>
   </section>
 
-<!-- <script>
-  $(function(){
-    $('.selectpicker').selectpicker();
-});
-</script> -->
+
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="js/bootstrap.min.js"></script>
