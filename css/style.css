@@ -570,7 +570,7 @@ h3.forecast {
 .forecast-card {
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: auto;
+    overflow-x: none;
     margin-left: -21px;
     padding-top: 7px;
     padding-left: 12px;
@@ -891,9 +891,19 @@ h3.footer-header {
     .top-menu-search {
         display: none;
     }
+    .main {
+        padding-right: 0px!important;
+    }
     .aside {
         flex: 0 0 100%;
         max-width: 100%;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .weather-now-uv, .weather-now-holiday {
+        flex-basis: 49%;
+        
+        margin-bottom: 17px;
     }
     .main {
         padding-right: 0px!important;
@@ -920,7 +930,8 @@ h3.footer-header {
     }
 
 }
-@media (max-width: 320px) {
+@media (max-width: 576px) {
+
     .footer-copyright {
         flex-direction: column;
     }
@@ -961,4 +972,87 @@ h3.footer-header {
     .footer-aside-content-2 {
         flex-basis: 50%;
     }
+}
+
+
+/***********************************/
+/*          +hourly.html           */
+/***********************************/
+
+.hourly-header {
+    font-size: 32px;
+    line-height: 41px;
+    color: #222222;
+    margin-top: -11px;
+    margin-bottom: 0px;
+}
+.hourly-sub-header {
+    font-size: 28px;
+    line-height: 38px;
+    color: #222222;
+    margin-top: 0px;
+    margin-bottom: 32px;
+}
+.hourly-info {
+    background-color: #F8F8F8;
+    font-size: 12px;
+    line-height: 16px;
+    color: #222222;
+    display: flex;
+    justify-content: space-between;
+    margin-right: -10px;
+    margin-left: -21px;
+    padding: 6px 78px 6px 23px;
+}
+.hourly-info-item {
+    display: flex;
+    gap: 32px;
+}
+.hourly-info-item-cont span {
+    font-weight: bold;
+}
+.hourly-details {
+    margin-top: 17px;
+    display: flex;
+    flex-direction: row;
+    margin-right: -10px;
+    margin-left: -21px;
+}
+.hourly-details-table {
+    width: 100%;
+}
+.hourly-details-row {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.hourly-details-row-header {
+    background-color: #F8F8F8;
+}
+.hourly-details-row-header-item {
+    font-size: 14px;
+    line-height: 19px;
+    color: #222222;
+    text-align: center;
+}
+.hourly-details-row-header-item-dark {
+    background-color: #F5F5F5;
+}
+td.hourly-details-row-item-dark {
+    background: #F8F8F8;
+    padding: 0;
+}
+.hourly-details-row-item {
+    font-size: 14px;
+    line-height: 19px;
+    color: #222222;
+    text-align: center;
+}
+.hourly-comment {
+    font-size: 10px;
+    line-height: 14px;
+    color: #7A7A7A;
 }
