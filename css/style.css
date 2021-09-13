@@ -289,6 +289,9 @@ nav.navbar .dropdown:hover > .city-weather {
     flex: 0 0 25.7%;
     max-width: 25.7%;
 }
+.aside-sticky {
+    position: sticky;
+}
 .head3 {
     font-size: 24px;
     line-height: 33px;
@@ -514,7 +517,7 @@ nav.navbar .dropdown:hover > .city-weather {
 .weather-text {
     font-size: 16px;
     line-height: 24px;
-    color: rgba(51, 51, 51, 0.6);
+    color: #7A7A7A;
     margin-top: 17px;
 }
 
@@ -539,9 +542,15 @@ nav.navbar .dropdown:hover > .city-weather {
     line-height: 22px;
     text-align: center;
 }
-.forecast-menu-item-current {
+.forecast-menu-item:hover, 
+.forecast-menu-item:active, 
+.forecast-menu-item:focus {
     background-color: #4D9335;
-    padding: 5px 10px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.forecast-menu-item-active {
+    background-color: #4D9335;
     color: #FFFFFF;
 }
 .forecast-menu-item-alert {
@@ -553,35 +562,40 @@ nav.navbar .dropdown:hover > .city-weather {
     font-size: 14px;
     line-height: 19px;
 }
-.forecast-menu-item:hover {
-    text-decoration: none;
-    color: #4D9335;
-}
-.forecast-menu-item-alert:hover, .forecast-menu-item-current:hover {
+.forecast-menu-item-alert:hover {
     color: #FFFFFF;
+    background: #D74A4A;
 }
 h3.forecast {
     font-size: 32px;
     line-height: 44px;
     color: #222222;
     margin-top: 19px;
-    margin-bottom: 17px;
+    margin-bottom: 19px;
 }
 .forecast-card {
     display: flex;
+    position: relative;
     flex-wrap: nowrap;
-    overflow-x: none;
+    overflow-x: auto;
     margin-left: -21px;
     padding-top: 7px;
     padding-left: 12px;
     -webkit-overflow-scrolling: touch;
 }
+.forecast-link {
+    display: block;
+}
+.forecast-link:hover {
+    background-color: #F4F4F4;
+    text-decoration: none;
+}
 .forecast-card-item {
     width: 135px;
-    height: 106px;
+    /*height: 106px;*/
     flex: 0 0 auto;
-    background-color: #FFFFFF;
     border-right: 1px solid #F2F2F2;
+    padding-bottom: 14px;
 }
 .forecast-card-item:last-child {
     border-right: 1px solid transparent;
@@ -648,7 +662,7 @@ h3.forecast {
     background-image: url('../img/alert-red.svg');
     height: 16px;
     width: 16px; 
-    margin-top: -4px;
+    margin-top: -15px;
 }
 .forecast-card-item-orange:before {
     position: absolute;
@@ -656,7 +670,7 @@ h3.forecast {
     background-image: url('../img/alert-orange.svg');
     height: 16px;
     width: 16px; 
-    margin-top: -4px;
+    margin-top: -15px;
 }
 .wrapper {
     display: flex;
@@ -676,7 +690,7 @@ h3.forecast {
 .report-text {
     font-size: 16px;
     line-height: 26px;
-    color: #DCDCDC;
+    color: #7A7A7A;
     margin-bottom: 27px;
 }
 
@@ -864,7 +878,7 @@ h3.footer-header {
 }
 .footer-menu-item {
     display: inline;
-    color: #9A9C9E;
+    
     padding-right: 5px;
 }
 .footer-menu-link:not(:first-child):before {
@@ -873,8 +887,12 @@ h3.footer-header {
     display: inline-block; 
     margin-right: 5px;
 }
+.footer-menu-link {
+    color: #9A9C9E;
+}
 .footer-menu-link:hover {
     text-decoration: none;
+    color:#FFFFFF;
 }
 .footer-social {
     padding-left: 2px;
