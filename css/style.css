@@ -21,6 +21,12 @@ section {
 .menu-container {
     background-color: #353A3E;
 }
+.logo-header {
+    width: 104px;
+    height: 40px;
+    margin-top: 1px;
+    margin-bottom: 7px;
+}
 .weather-container {
     background-color: #fff;
 }
