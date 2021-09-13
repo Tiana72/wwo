@@ -23,3 +23,21 @@ function backToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+$(document).ready(function(){
+    $(".close-icon1").click(function(){
+      $(".weather-menu-item1").hide();
+    });
+    $(".close-icon2").click(function(){
+      $(".weather-menu-item2").hide();
+    });
+    $(".close-icon3").click(function(){
+      $(".weather-menu-item3").hide();
+    });
+    $(".close-icon4").click(function(){
+      $(".weather-menu-item4").hide();
+    });
+    $(".close-icon5").click(function(){
+      $(".weather-menu-item5").hide();
+    });     
+  });
