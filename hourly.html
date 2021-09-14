@@ -12,12 +12,15 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <button type="button" class="btn btn-floating btn-lg btn-btt" id="btn-back-to-top">
+    <img src="img/arrow-top.svg" width="24" height="30" alt="">
+  </button>
   <header>
     <div class="container-fluid menu-container">
       <div class="container w1170">
         <nav class="navbar navbar-expand-sm menu">
           <!-- Logo -->
-          <a class="navbar-brand logo" href="#"><img src="img/logo-wwo.png" alt=""></a>
+          <a class="navbar-brand logo" href="#"><img class="logo-header" src="img/logo.svg" alt=""></a>
           <button class="navbar-toggler top-toggler" type="button" data-toggle="collapse" data-target="#top-menu" aria-controls="top-menu" aria-expanded="true" aria-label="Toggle navigation">
             <img class="burger" src="img/burger.svg" alt="">
           </button>   
@@ -28,7 +31,7 @@
                 <a class="nav-link top-menu-link" href="#">Weather</a>
               </li>
               <li class="nav-item top-menu-item">
-                <a class="nav-link top-menu-link" href="#">Hourly</a>
+                <a class="nav-link top-menu-link" href="hourly.html">Hourly</a>
               </li>
               <li class="nav-item top-menu-item">
                 <a class="nav-link top-menu-link" href="#">History</a>
@@ -121,8 +124,8 @@
           </button>
           <div class="collapse navbar-collapse" id="weather-menu">
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item dropdown weather-menu-item">
-                <a class="nav-link  weather-menu-link" href="#" id="city1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manchester, UK 18°C <span class="weather-icon"><img src="img/cloud.svg" alt=""></span><span href="#" class="close-icon"><img src="img/close.svg" alt=""></span ></a>
+              <li class="nav-item dropdown weather-menu-item1">
+                <a class="nav-link  weather-menu-link" href="#" id="city1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manchester, UK 18°C <span class="weather-icon"><img src="img/cloud.svg" alt=""></span><span href="#" class="close-icon1"><img src="img/close.svg" alt=""></span ></a>
                 <div class="dropdown-menu city-weather" aria-labelledby="city1">
                   <div class=" city-weather-item" href="#">
                     <div class="city-time">Morning</div>
@@ -152,8 +155,8 @@
                   </div>
                 </div>
               </li>
-              <li class="nav-item dropdown weather-menu-item">
-                <a class="nav-link  weather-menu-link" href="#" id="city2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">London, UK 20°C <span class="weather-icon"><img src="img/sun-cloud.svg" alt=""></span><span href="#" class="close-icon"><img src="img/close.svg" alt=""></span ></a>
+              <li class="nav-item dropdown weather-menu-item2">
+                <a class="nav-link  weather-menu-link" href="#" id="city2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">London, UK 20°C <span class="weather-icon"><img src="img/sun-cloud.svg" alt=""></span><span href="#" class="close-icon2"><img src="img/close.svg" alt=""></span ></a>
                 <div class="dropdown-menu city-weather" aria-labelledby="city2">
                   <div class=" city-weather-item" href="#">
                     <div class="city-time">Morning</div>
@@ -183,8 +186,8 @@
                   </div>
                 </div>
               </li>
-              <li class="nav-item dropdown weather-menu-item">
-                <a class="nav-link  weather-menu-link" href="#" id="city3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edinburg, UK 15°C <span class="weather-icon"><img src="img/cloud.svg" alt=""></span><span href="#" class="close-icon"><img src="img/close.svg" alt=""></span ></a>
+              <li class="nav-item dropdown weather-menu-item3">
+                <a class="nav-link  weather-menu-link" href="#" id="city3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edinburg, UK 15°C <span class="weather-icon"><img src="img/cloud.svg" alt=""></span><span href="#" class="close-icon3"><img src="img/close.svg" alt=""></span ></a>
                 <div class="dropdown-menu city-weather" aria-labelledby="city3">
                   <div class=" city-weather-item" href="#">
                     <div class="city-time">Morning</div>
@@ -214,8 +217,8 @@
                   </div>
                 </div>
               </li>
-              <li class="nav-item dropdown weather-menu-item">
-                <a class="nav-link  weather-menu-link" href="#" id="city4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Glasgou, UK 11°C <span class="weather-icon"><img src="img/sun-cloud.svg" alt=""></span><span href="#" class="close-icon"><img src="img/close.svg" alt=""></span ></a>
+              <li class="nav-item dropdown weather-menu-item4">
+                <a class="nav-link  weather-menu-link" href="#" id="city4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Glasgou, UK 11°C <span class="weather-icon"><img src="img/sun-cloud.svg" alt=""></span><span href="#" class="close-icon4"><img src="img/close.svg" alt=""></span ></a>
                 <div class="dropdown-menu city-weather" aria-labelledby="city4">
                   <div class=" city-weather-item" href="#">
                     <div class="city-time">Morning</div>
@@ -245,8 +248,8 @@
                   </div>
                 </div>
               </li>
-              <li class="nav-item dropdown weather-menu-item">
-                <a class="nav-link  weather-menu-link" href="#" id="city5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">London, UK 20°C <span class="weather-icon"><img src="img/cloud.svg" alt=""></span><span href="#" class="close-icon"><img src="img/close.svg" alt=""></span ></a>
+              <li class="nav-item dropdown weather-menu-item5">
+                <a class="nav-link  weather-menu-link" href="#" id="city5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">London, UK 20°C <span class="weather-icon"><img src="img/cloud.svg" alt=""></span><span href="#" class="close-icon5"><img src="img/close.svg" alt=""></span ></a>
                 <div class="dropdown-menu city-weather" aria-labelledby="city5">
                   <div class=" city-weather-item" href="#">
                     <div class="city-time">Morning</div>
@@ -286,7 +289,7 @@
       <div class="row">
         <div class="col">
           <div class="main-rec box-rec">
-            <p> AD 900x360</p>
+            <p> AD </p>
           </div>
         </div>
       </div>
@@ -311,7 +314,7 @@
         <div class="col main">
           <div class="box forecast-box">
             <div class="forecast-menu">
-              <a href="" class="forecast-menu-item forecast-menu-item-current">10 days weather</a>
+              <a href="" class="forecast-menu-item forecast-menu-item-active">10 days weather</a>
               <a href="" class="forecast-menu-item">Hourly weather</a>
               <a href="" class="forecast-menu-item">History</a>
               <a href="" class="forecast-menu-item">Days</a>
@@ -322,78 +325,90 @@
             <h3 class="forecast">Hourly weather</h3>
             <div class="wrapper">
               <div class="forecast-card">
-                <div class="forecast-card-item forecast-card-item-orange">
-                  <div class="forecast-card-item-weather">
-                    <div class="forecast-card-item-weather-icon">
-                      <img src="img/sun-cloud.svg" height="31" width="38"  alt="">
+                <a href="" class="forecast-link">
+                  <div class="forecast-card-item forecast-card-item-orange">
+                    <div class="forecast-card-item-weather">
+                      <div class="forecast-card-item-weather-icon">
+                        <img src="img/sun-cloud.svg" height="31" width="38"  alt="">
+                      </div>
+                      <div class="forecast-card-item-weather-temp">
+                        <p>32 °C<span>6 °C</span></p>
+                      </div>
                     </div>
-                    <div class="forecast-card-item-weather-temp">
-                      <p>32 °C<span>6 °C</span></p>
-                    </div>
+                    <div class="day current">Today</div>
+                    <span>27 Jul</span>
                   </div>
-                  <div class="day current">Today</div>
-                  <span>27 Jul</span>
-                </div>
-                <div class="forecast-card-item forecast-card-item-tomorrow forecast-card-item-red">
-                  <div class="forecast-card-item-weather">
-                    <div class="forecast-card-item-weather-icon">
-                      <img src="img/sun-cloud.svg" height="31" width="38"  alt="">
+                </a>
+                <a href="" class="forecast-link">
+                  <div class="forecast-card-item forecast-card-item-red">
+                    <div class="forecast-card-item-weather">
+                      <div class="forecast-card-item-weather-icon">
+                        <img src="img/sun-cloud.svg" height="31" width="38"  alt="">
+                      </div>
+                      <div class="forecast-card-item-weather-temp">
+                        <p>32 °C<span>6 °C</span></p>
+                      </div>
                     </div>
-                    <div class="forecast-card-item-weather-temp">
-                      <p>32 °C<span>6 °C</span></p>
-                    </div>
+                    <div class="day">Tomorrow</div>
+                    <span>27 Jul</span>
                   </div>
-                  <div class="day">Tomorrow</div>
-                  <span>27 Jul</span>
-                </div>
-                <div class="forecast-card-item">
-                  <div class="forecast-card-item-weather">
-                    <div class="forecast-card-item-weather-icon">
-                      <img src="img/sun-cloud.svg" height="31" width="38"  alt="">
+                </a>
+                <a href="" class="forecast-link">
+                  <div class="forecast-card-item">
+                    <div class="forecast-card-item-weather">
+                      <div class="forecast-card-item-weather-icon">
+                        <img src="img/sun-cloud.svg" height="31" width="38"  alt="">
+                      </div>
+                      <div class="forecast-card-item-weather-temp">
+                        <p>32 °C<span>6 °C</span></p>
+                      </div>
                     </div>
-                    <div class="forecast-card-item-weather-temp">
-                      <p>32 °C<span>6 °C</span></p>
-                    </div>
+                    <div class="day">Wednesday</div>
+                    <span>27 Jul</span>
                   </div>
-                  <div class="day">Wednesday</div>
-                  <span>27 Jul</span>
-                </div>
-                <div class="forecast-card-item">
-                  <div class="forecast-card-item-weather">
-                    <div class="forecast-card-item-weather-icon">
-                      <img src="img/sun-cloud.svg" height="31" width="38"  alt="">
+                </a>
+                <a href="" class="forecast-link">
+                  <div class="forecast-card-item">
+                    <div class="forecast-card-item-weather">
+                      <div class="forecast-card-item-weather-icon">
+                        <img src="img/sun-cloud.svg" height="31" width="38"  alt="">
+                      </div>
+                      <div class="forecast-card-item-weather-temp">
+                        <p>32 °C<span>6 °C</span></p>
+                      </div>
                     </div>
-                    <div class="forecast-card-item-weather-temp">
-                      <p>32 °C<span>6 °C</span></p>
-                    </div>
+                    <div class="day">Tuesday</div>
+                    <span>27 Jul</span>
                   </div>
-                  <div class="day">Tuesday</div>
-                  <span>27 Jul</span>
-                </div>
-                <div class="forecast-card-item">
-                  <div class="forecast-card-item-weather">
-                    <div class="forecast-card-item-weather-icon">
-                      <img src="img/sun-cloud.svg" height="31" width="38"  alt="">
+                </a>
+                <a href="" class="forecast-link">
+                  <div class="forecast-card-item">
+                    <div class="forecast-card-item-weather">
+                      <div class="forecast-card-item-weather-icon">
+                        <img src="img/sun-cloud.svg" height="31" width="38"  alt="">
+                      </div>
+                      <div class="forecast-card-item-weather-temp">
+                        <p>32 °C<span>6 °C</span></p>
+                      </div>
                     </div>
-                    <div class="forecast-card-item-weather-temp">
-                      <p>32 °C<span>6 °C</span></p>
-                    </div>
+                    <div class="day">Saturday</div>
+                    <span>27 Jul</span>
                   </div>
-                  <div class="day">Saturday</div>
-                  <span>27 Jul</span>
-                </div>
-                <div class="forecast-card-item">
-                  <div class="forecast-card-item-weather">
-                    <div class="forecast-card-item-weather-icon">
-                      <img src="img/sun-cloud.svg" height="31" width="38"  alt="">
+                </a>
+                <a href="" class="forecast-link">
+                  <div class="forecast-card-item">
+                    <div class="forecast-card-item-weather">
+                      <div class="forecast-card-item-weather-icon">
+                        <img src="img/sun-cloud.svg" height="31" width="38"  alt="">
+                      </div>
+                      <div class="forecast-card-item-weather-temp">
+                        <p>32 °C<span>6 °C</span></p>
+                      </div>
                     </div>
-                    <div class="forecast-card-item-weather-temp">
-                      <p>32 °C<span>6 °C</span></p>
-                    </div>
+                    <div class="day">Tomorrow</div>
+                    <span>27 Jul</span>
                   </div>
-                  <div class="day">Tomorrow</div>
-                  <span>27 Jul</span>
-                </div>
+                </a>
               </div>
               <div class="arrow">
                 <a href=""><img src="img/green-arrow.svg" width="21" alt=""></a>
@@ -485,30 +500,34 @@
 
         </div>
         <div class="col-md-3 aside">
-          <div class=" box weather-now-uv">
-            <h3 class="head3"> Ultraviolet Index</h3>
-            <div class="progress">
-              <span class="day-uv">Mon: </span><div class="progress-bar" role="progressbar" style="width: 9%; background-color: #4B9100;" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100">1</div>
+          <div class="aside-sticky">
+            <div class=" box weather-now-uv">
+              <h3 class="head3"> Ultraviolet Index</h3>
+              <div class="progress">
+                <span class="day-uv">Mon: </span><div class="progress-bar" role="progressbar" style="width: 9%; background-color: #4B9100;" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100">1</div>
+              </div>
+              <div class="progress">
+                <span class="day-uv">Tue: </span><div class="progress-bar" role="progressbar" style="width: 90%; background-color: #4B2B51;" aria-valuenow="11" aria-valuemin="0" aria-valuemax="100">11</div>
+              </div>
+              <div class="progress">
+                <span class="day-uv">Wed: </span><div class="progress-bar" role="progressbar" style="width: 72%; background-color: #F24841;" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100">8</div>
+              </div>
+              <div class="progress">
+                <span class="day-uv">Thu: </span><div class="progress-bar" role="progressbar" style="width: 36%; background-color: #EAE462;" aria-valuenow="4" aria-valuemin="0" aria-valuemax="100">4</div>
+              </div>
+              <div class="progress">
+                <span class="day-uv">Fri: </span><div class="progress-bar" role="progressbar" style="width: 18%; background-color: #9FC920;" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100">2</div>
+              </div>
+              <hr class="uv-scale-hr">
+              <img class="uv-scale-img" src="img/scale.svg" alt="">
             </div>
-            <div class="progress">
-              <span class="day-uv">Tue: </span><div class="progress-bar" role="progressbar" style="width: 90%; background-color: #4B2B51;" aria-valuenow="11" aria-valuemin="0" aria-valuemax="100">11</div>
+            <div class="box weather-now-holiday">
+              <img class="holiday-img" src="img/holiday.png" alt="">
+              <p class="holiday"> Book flights and hotels for Minsk</p>
             </div>
-            <div class="progress">
-              <span class="day-uv">Wed: </span><div class="progress-bar" role="progressbar" style="width: 72%; background-color: #F24841;" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100">8</div>
-            </div>
-            <div class="progress">
-              <span class="day-uv">Thu: </span><div class="progress-bar" role="progressbar" style="width: 36%; background-color: #EAE462;" aria-valuenow="4" aria-valuemin="0" aria-valuemax="100">4</div>
-            </div>
-            <div class="progress">
-              <span class="day-uv">Fri: </span><div class="progress-bar" role="progressbar" style="width: 18%; background-color: #9FC920;" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100">2</div>
-            </div>
-            <hr class="uv-scale-hr">
-            <img class="uv-scale-img" src="img/scale.svg" alt="">
           </div>
-          <div class="box weather-now-holiday">
-            <img class="holiday-img" src="img/holiday.png" alt="">
-            <p class="holiday"> Book flights and hotels for Minsk</p>
-          </div>
+    
+
           <div class="box box-rec">
             Some AD
           </div>
@@ -535,10 +554,10 @@
             <div class="footer-main">
               <div class="footer-main-content">
                 <div class="footer-main-content-1">
-                  <img src="img/logo-wwo.png" alt="" class="logo-footer">
-                  <img src="img/Google.svg" alt="" class="footer-img-shop">
-                  <img src="img/Apple.svg" alt="" class="footer-img-shop">
-                  <img src="img/youtube.svg" alt="" class="footer-img-shop">
+                  <img src="img/logo.svg" alt="" class="logo-footer">
+                  <a href="https://play.google.com/store/apps/details?id=com.wwoandroid" target="_blank"><img src="img/Google.svg" alt="" class="footer-img-shop"></a>
+                  <a href="https://apps.apple.com/gb/app/worldweatheronline/id937165295" target="_blank"><img src="img/Apple.svg" alt="" class="footer-img-shop"></a>
+                  <a href="https://www.youtube.com/c/Worldweatheronline" target="_blank"><img src="img/youtube.svg" alt="" class="footer-img-shop"></a>
                 </div>
                 <div class="footer-main-content-2">
                   <h3 class="footer-header">Navigation</h3>
@@ -609,6 +628,10 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/wwo.js"></script>
+  <script>
+
+    </script>
 
 </body>
 </html>
