@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WWO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <button type="button" class="btn btn-floating btn-lg btn-btt" id="btn-back-to-top">
+    <img class="btt" src="img/arrow-top.svg" alt="">
+  </button>
+  <header>
+    <div class="container-fluid menu-container">
+      <div class="container w1170">
+        <nav class="navbar navbar-expand-sm menu">
+          <!-- Logo -->
+          <a class="navbar-brand logo" href="#"><img class="logo-header" src="img/logo.svg" alt=""></a>
+          <button class="navbar-toggler top-toggler" type="button" data-toggle="collapse" data-target="#top-menu" aria-controls="top-menu" aria-expanded="true" aria-label="Toggle navigation">
+            <img class="burger" src="img/burger.svg" alt="">
+          </button>   
+          <!-- Top Menu -->
+          <div class="navbar-collapse collapse" id="top-menu" style="">
+            <ul class="navbar-nav mr-auto top-menu">
+              <li class="nav-item top-menu-item">
+                <a class="nav-link top-menu-link" href="index.html">Weather</a>
+              </li>
+              <li class="nav-item top-menu-item">
+                <a class="nav-link top-menu-link" href="hourly.html">Hourly</a>
+              </li>
+              <li class="nav-item top-menu-item">
+                <a class="nav-link top-menu-link" href="history.html">History</a>
+              </li>
+              <li class="nav-item top-menu-item">
+                <a class="nav-link top-menu-link" href="widgets.html">Widgets</a>
+              </li>
+              <li class="nav-item top-menu-item">
+                <a class="nav-link top-menu-link" href="api.html">API</a>
+              </li>
+            </ul>
+            
+
+            <!-- Burger -->
+            <div class="btn-group burger-group" role="group" aria-label="Button group with nested dropdown">
+              <button id="btnGroupDrop1" type="button" class="btn top-toggler" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img class="burger" src="img/burger.svg" alt="">
+              </button>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupDrop1">
+                <a class="dropdown-item" href="index.html">Weather</a>
+                <a class="dropdown-item" href="hourly.html">Hourly</a>
+                <a class="dropdown-item" href="history.html">History</a>
+                <a class="dropdown-item" href="widgets.html">Widgets</a>
+                <a class="dropdown-item" href="api.html">API</a>
+              </div>
+            </div>              
+          </div>
+        </nav>
+            <!-- Settings modal -->
+            <button type="button" class="btn btn-settings" data-toggle="modal" data-target="#settings">
+              <img class="settings" src="img/sett-c-29.svg" alt="">
+            </button>
+            <div class="modal fade" id="settings" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-body settings-body">
+                    <div class="settings-body-item">
+                      <p class="sett">Temperature</p>
+                      <div class="btn-group" role="group" aria-label="sett-temp">
+                        <button type="button" class="btn btn-secondary sett-btn">°F</button>
+                        <button type="button" class="btn btn-primary sett-btn sett-btn-primary">°C</button>
+                      </div>
+                    </div>
+                    <div class="settings-body-item">
+                      <p class="sett">Wind</p>
+                      <div class="btn-group" role="group" aria-label="sett-temp">
+                        <button type="button" class="btn btn-primary sett-btn sett-btn-primary">M/S</button>
+                        <button type="button" class="btn btn-secondary sett-btn">MP/H</button>
+                        <button type="button" class="btn btn-secondary sett-btn">KP/H</button>
+                      </div>
+                    </div>
+                    <div class="settings-body-item">
+                      <p class="sett">Language</p>
+                      <select class="btn btn-secondary sett-btn">
+                        <option data-content='<span class=""></span> ENG'>ENG</option>
+                        <option data-content='<span class=""></span> RU'>RU</option>
+                        <option data-content='<span class=""></span> BY'>BY</option>
+                      </select>
+                    </div>
+                    <div class="settings-body-item">
+                      <p class="sett">Time(Hours)</p>
+                      <div class="btn-group" role="group" aria-label="sett-temp">
+                        <button type="button" class="btn btn-secondary sett-btn">12</button>
+                        <button type="button" class="btn btn-primary sett-btn sett-btn-primary">24</button>
+                      </div>
+                    </div>
+                    <div class="settings-body-item">
+                      <p class="sett">Precipitation</p>
+                      <div class="btn-group" role="group" aria-label="sett-temp">
+                        <button type="button" class="btn btn-secondary sett-btn">INCH</button>
+                        <button type="button" class="btn btn-primary sett-btn sett-btn-primary">MM</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Settings modal end -->
+        <form class="form-inline my-2 my-md-0 top-menu-search" action="http://google.com/search" target="_blank">
+          <input name="search" class="form-control search-input" type="search" autocomplete="on" placeholder="Search">
+        </form>
+      </div>
+    </div>
+
+    <div class="container-fluid weather-container">
+      <div class="container w1170">
+        <nav class="navbar navbar-expand weather-menu">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="weather-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="weather-menu">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown weather-menu-item1">
+                <a class="nav-link  weather-menu-link" href="#" id="city1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manchester, UK 18°C <span class="weather-icon"><img src="img/cloud.svg" alt=""></span><span href="#" class="close-icon1"><img src="img/close.svg" alt=""></span ></a>
+                <div class="dropdown-menu city-weather" aria-labelledby="city1">
+                  <div class=" city-weather-item" href="#">
+                    <div class="city-time">Morning</div>
+                    <div class="city-temperature">12°C</div>
+                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                  </div>
+                  <div class="dropdown-divider weather-divider"></div>
+                  <div class=" city-weather-item" href="#">
+                    <div class="city-time">Day</div>
+                    <div class="city-temperature">12°C</div>
+                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                  </div>
+                  <div class="dropdown-divider weather-divider"></div>
+                  <div class=" city-weather-item" href="#">
+                    <div class="city-time">Evening</div>
+                    <div class="city-temperature">12°C</div>
+                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                  </div>
+                  <div class="dropdown-divider weather-divider"></div>
+                  <div class=" city-weather-item" href="#">
+                    <div class="city-time">Night</div>
+                    <div class="city-temperature">12°C</div>
+                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                  </div>
+                  <div class="city-weather-more">
+                    <a href=""><img src="img/moredetails.svg" alt=""></a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown weather-menu-item2">
+                <a class="nav-link  weather-menu-link" href="#" id="city2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">London, UK 20°C <span class="weather-icon"><img src="img/sun-cloud.svg" alt=""></span><span href="#" class="close-icon2"><img src="img/close.svg" alt=""></span ></a>
+                <div class="dropdown-menu city-weather" aria-labelledby="city2">
+                  <div class=" city-weather-item" href="#">
+                    <div class="city-time">Morning</div>
+                    <div class="city-temperature">12°C</div>
+                    <div class="city-weather-icon"><img src="img/sun-cloud.svg" alt=""></div>
+                  </div>
+                  <div class="dropdown-divider weather-divider"></div>
+                  <div class=" city-weather-item" href="#">
+                    <div class="city-time">Day</div>
+                    <div class="city-temperature">12°C</div>
+                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                  </div>
+                  <div class="dropdown-divider weather-divider"></div>
+                  <div class=" city-weather-item" href="#">
+                    <div class="city-time">Evening</div>
+                    <div class="city-temperature">12°C</div>
+                    <div class="city-weather-icon"><img src="img/sun-cloud.svg" alt=""></div>
+                  </div>
+                  <div class="dropdown-divider weather-divider"></div>
+                  <div class=" city-weather-item" href="#">
+                    <div class="city-time">Night</div>
+                    <div class="city-temperature">12°C</div>
+                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                  </div>
+                  <div class="city-weather-more">
+                    <a href=""><img src="img/moredetails.svg" alt=""></a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown weather-menu-item3">
+                <a class="nav-link  weather-menu-link" href="#" id="city3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edinburg, UK 15°C <span class="weather-icon"><img src="img/cloud.svg" alt=""></span><span href="#" class="close-icon3"><img src="img/close.svg" alt=""></span ></a>
+                <div class="dropdown-menu city-weather" aria-labelledby="city3">
+                  <div class=" city-weather-item" href="#">
+                    <div class="city-time">Morning</div>
+                    <div class="city-temperature">12°C</div>
+                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                  </div>
+                  <div class="dropdown-divider weather-divider"></div>
+                  <div class=" city-weather-item" href="#">
+                    <div class="city-time">Day</div>
+                    <div class="city-temperature">12°C</div>
+                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                  </div>
+                  <div class="dropdown-divider weather-divider"></div>
+                  <div class=" city-weather-item" href="#">
+                    <div class="city-time">Evening</div>
+                    <div class="city-temperature">12°C</div>
+                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                  </div>
+                  <div class="dropdown-divider weather-divider"></div>
+                  <div class=" city-weather-item" href="#">
+                    <div class="city-time">Night</div>
+                    <div class="city-temperature">12°C</div>
+                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                  </div>
+                  <div class="city-weather-more">
+                    <a href=""><img src="img/moredetails.svg" alt=""></a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown weather-menu-item4">
+                <a class="nav-link  weather-menu-link" href="#" id="city4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Glasgou, UK 11°C <span class="weather-icon"><img src="img/sun-cloud.svg" alt=""></span><span href="#" class="close-icon4"><img src="img/close.svg" alt=""></span ></a>
+                <div class="dropdown-menu city-weather" aria-labelledby="city4">
+                  <div class=" city-weather-item" href="#">
+                    <div class="city-time">Morning</div>
+                    <div class="city-temperature">12°C</div>
+                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                  </div>
+                  <div class="dropdown-divider weather-divider"></div>
+                  <div class=" city-weather-item" href="#">
+                    <div class="city-time">Day</div>
+                    <div class="city-temperature">12°C</div>
+                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                  </div>
+                  <div class="dropdown-divider weather-divider"></div>
+                  <div class=" city-weather-item" href="#">
+                    <div class="city-time">Evening</div>
+                    <div class="city-temperature">12°C</div>
+                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                  </div>
+                  <div class="dropdown-divider weather-divider"></div>
+                  <div class=" city-weather-item" href="#">
+                    <div class="city-time">Night</div>
+                    <div class="city-temperature">12°C</div>
+                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                  </div>
+                  <div class="city-weather-more">
+                    <a href=""><img src="img/moredetails.svg" alt=""></a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown weather-menu-item5">
+                <a class="nav-link  weather-menu-link" href="#" id="city5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">London, UK 20°C <span class="weather-icon"><img src="img/cloud.svg" alt=""></span><span href="#" class="close-icon5"><img src="img/close.svg" alt=""></span ></a>
+                <div class="dropdown-menu city-weather" aria-labelledby="city5">
+                  <div class=" city-weather-item" href="#">
+                    <div class="city-time">Morning</div>
+                    <div class="city-temperature">12°C</div>
+                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                  </div>
+                  <div class="dropdown-divider weather-divider"></div>
+                  <div class=" city-weather-item" href="#">
+                    <div class="city-time">Day</div>
+                    <div class="city-temperature">12°C</div>
+                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                  </div>
+                  <div class="dropdown-divider weather-divider"></div>
+                  <div class=" city-weather-item" href="#">
+                    <div class="city-time">Evening</div>
+                    <div class="city-temperature">12°C</div>
+                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                  </div>
+                  <div class="dropdown-divider weather-divider"></div>
+                  <div class=" city-weather-item" href="#">
+                    <div class="city-time">Night</div>
+                    <div class="city-temperature">12°C</div>
+                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                  </div>
+                  <div class="city-weather-more">
+                    <a href=""><img src="img/moredetails.svg" alt=""></a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container w1170">
+      <div class="row">
+        <div class="col">
+          <div class="main-rec box-rec">
+            <p> AD </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container w1170">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breads">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">World weather</a></li>
+          <li class="breadcrumb-item"><a href="#">UK</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Manchester</li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+
+ <!-- Forecast for 10 days -->  
+  <section>
+    <div class="container w1170">
+      <div class="row no-gutters">
+        <div class="col main">
+          <div class="box forecast-box">
+            <div class="forecast-menu">
+              <a href="index.html" class="forecast-menu-item">10 days weather</a>
+              <a href="hourly.html" class="forecast-menu-item">Hourly weather</a>
+              <a href="history.html" class="forecast-menu-item">History</a>
+              <a href="days.html" class="forecast-menu-item">Days</a>
+              <a href="" class="forecast-menu-item ">Averages</a>
+              <a href="" class="forecast-menu-item forecast-menu-item-alert">Weather alerts!</a>
+              <a href="" class="forecast-menu-item">Weather maps <img src="img/maps-logo.png" width="15" height="17" alt=""></a>
+            </div>
+
+            <form action="">
+              <div class="history-date-block">
+                <div class="history-date-item">
+                    <select class="history-date-control" id="history-date">
+                      <option class="history-date-option">1</option>
+                      <option class="history-date-option">2</option>
+                      <option class="history-date-option">3</option>
+                      <option class="history-date-option">4</option>
+                      <option class="history-date-option">5</option>
+                      <option class="history-date-option">6</option>
+                      <option class="history-date-option">7</option>
+                      <option class="history-date-option">8</option>
+                      <option class="history-date-option">9</option>
+                      <option class="history-date-option">10</option>
+                      <option class="history-date-option">11</option>
+                      <option class="history-date-option">12</option>
+                      <option class="history-date-option">13</option>
+                      <option class="history-date-option">14</option>
+                      <option class="history-date-option">15</option>
+                      <option class="history-date-option">16</option>
+                      <option class="history-date-option">17</option>
+                      <option class="history-date-option">18</option>
+                      <option class="history-date-option">19</option>
+                      <option class="history-date-option">20</option>
+                      <option class="history-date-option">21</option>
+                      <option class="history-date-option">22</option>
+                      <option class="history-date-option">23</option>
+                      <option class="history-date-option">24</option>
+                      <option class="history-date-option">25</option>
+                      <option class="history-date-option">26</option>
+                      <option class="history-date-option">27</option>
+                      <option class="history-date-option">28</option>
+                      <option class="history-date-option">29</option>
+                      <option class="history-date-option">30</option>
+                      <option class="history-date-option">31</option>
+                    </select>
+                </div>
+                <div class="history-date-item">
+                  <select class="history-date-control select" id="history-month">
+                    <!-- <option class="history-date-option" disabled>Choose month</option> -->
+                    <option class="history-date-option">January</option>
+                    <option class="history-date-option">Febryary</option>
+                    <option class="history-date-option">March</option>
+                    <option class="history-date-option">April</option>
+                    <option class="history-date-option">May</option>
+                    <option class="history-date-option">June</option>
+                    <option class="history-date-option">July</option>
+                    <option class="history-date-option">August</option>
+                    <option class="history-date-option">September</option>
+                    <option class="history-date-option">October</option>
+                    <option class="history-date-option">November</option>
+                    <option class="history-date-option">December</option>
+                  </select>
+              </div>
+              <div class="history-date-item">
+                <select class="history-date-control" id="history-year">
+                  <option class="history-date-option">2021</option>
+                  <option class="history-date-option">2020</option>
+                  <option class="history-date-option">2019</option>
+                  <option class="history-date-option">2018</option>
+                  <option class="history-date-option">2017</option>
+                  <option class="history-date-option">2016</option>
+                </select>
+            </div>
+        </div>
+            </form>
+
+
+            
+            <div class="city-hourly-weather">
+              <h3 class="hourly-header">Manchester, UK</h3>
+              <h4 class="hourly-sub-header">Hourly weather Friday, 24 april, 2020</h4>
+              <div class="hourly-info">
+                <div class="hourly-info-item">
+                  <div class="hourly-info-item-cont">Sunrise: <span>04:58 AM</span></div>
+                  <div class="hourly-info-item-cont">Sunset: <span>09:58 AM</span></div>
+                </div>
+                <div class="hourly-info-item">
+                  <div class="hourly-info-item-cont">Moonrise: <span>10:58</span></div>
+                  <div class="hourly-info-item-cont">Moonset: <span>no moonset</span></div>
+                </div>
+                <div class="hourly-info-item">
+                  <div class="hourly-info-item-cont">Phase: <img src="/img/phase-half1.svg" width="16px" height="16px" alt=""></div>
+                    <div class="hourly-info-item-cont">Illum: <span>48.3</span></div>
+                </div>
+              </div>
+              <div class="hourly-details">
+                <table class="hourly-details-table">
+                  <tr class="hourly-details-row hourly-details-row-header">
+                    <td class="hourly-details-row-header-item">Time</td>
+                    <td class="hourly-details-row-header-item">Forecast</td>
+                    <td class="hourly-details-row-header-item">Temp.</td>
+                    <td class="hourly-details-row-header-item hourly-details-row-header-item-dark">Rain</td>
+                    <td class="hourly-details-row-header-item">Rain %</td>
+                    <td class="hourly-details-row-header-item">Cloud</td>
+                    <td class="hourly-details-row-header-item">Wind</td>
+                    <td class="hourly-details-row-header-item">Gust</td>
+                    <td class="hourly-details-row-header-item">Dir</td>
+                    <td class="hourly-details-row-header-item">Humid.</td>
+                    <td class="hourly-details-row-header-item">Pressure</td>
+                  </tr>
+                  <tr class="hourly-details-row">
+                    <td class="hourly-details-row-item">00:00</td>
+                    <td class="hourly-details-row-item">
+                      <img src="img/cloud.svg" width="32" alt="">
+                      <p class="hourly-comment">Cloudy</p>
+                    </td>
+                    <td class="hourly-details-row-item">
+                      <p class="hourly-temp">4 °C</p>
+                      <p class="hourly-comment">Feels -22 °C</p>
+                    </td>
+                    <td class="hourly-details-row-item">
+                      <div class="rain-blue">
+                        <div class="rain-back"></div>
+                        <div class="rain-curr" style="height: 33px;"></div>
+                        <div class="rain-number">4</div>
+                      </div>
+                    </td>
+                    <td class="hourly-details-row-item">0%</td>
+                    <td class="hourly-details-row-item">7%</td>
+                    <td class="hourly-details-row-item">
+                      <div class="wind-orange"></div>
+                      <div class="wind-number">14 km/h</div>
+                    </td>
+                    <td class="hourly-details-row-item"><div class="wind-number">14 km/h</div></td>
+                    <td class="hourly-details-row-item">
+                      <div class="hourly-arrow">
+                        <svg class="hourly-arrow hourly-arrow-white"  style="transform: rotate(-45deg);">
+                          <use href="img/arrows.svg#hourly-arrow"></use>
+                        </svg>
+                      </div>
+                    </td>
+                    <td class="hourly-details-row-item">7%</td>
+                    <td class="hourly-details-row-item">1023 mb 
+                      <svg class="arrow-up">
+                        <use href="img/arrows.svg#arrow-up"></use>
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr class="hourly-details-row">
+                    <td class="hourly-details-row-item">00:00</td>
+                    <td class="hourly-details-row-item">
+                      <img src="img/cloud.svg" width="32" alt="">
+                      <p class="hourly-comment">Cloudy</p>
+                    </td>
+                    <td class="hourly-details-row-item">
+                      <p class="hourly-temp">451 °F</p>
+                      <p class="hourly-comment">Feels -22 °C</p>
+                    </td>
+                    <td class="hourly-details-row-item">
+                      <div class="rain-blue">
+                        <div class="rain-back"></div>
+                        <div class="rain-curr" style="height: 25px;"></div>
+                        <div class="rain-number">3</div>
+                      </div>
+                    </td>
+                    <td class="hourly-details-row-item">0%</td>
+                    <td class="hourly-details-row-item">2%</td>
+                    <td class="hourly-details-row-item">
+                      <div class=""></div>
+                      <div class="">14 km/h</div>
+                    </td>
+                    <td class="hourly-details-row-item"><div class="">14 km/h</div></td>
+                    <td class="hourly-details-row-item">
+                      <div class="hourly-arrow">
+                        <svg class="hourly-arrow"  style="transform: rotate(-135deg);">
+                          <use href="img/arrows.svg#hourly-arrow"></use>
+                        </svg>
+                      </div>
+                    </td>
+                    <td class="hourly-details-row-item">2%</td>
+                    <td class="hourly-details-row-item">1023 mb 
+                      <svg class="arrow-down">
+                        <use href="img/arrows.svg#arrow-up"></use>
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr class="hourly-details-row">
+                    <td class="hourly-details-row-item">00:00</td>
+                    <td class="hourly-details-row-item">
+                      <img src="img/cloud.svg" width="32" alt="">
+                      <p class="hourly-comment">Cloudy</p>
+                    </td>
+                    <td class="hourly-details-row-item">
+                      <p class="hourly-temp">4 °C</p>
+                      <p class="hourly-comment">Feels -22 °C</p>
+                    </td>
+                    <td class="hourly-details-row-item">
+                      <div class="rain-blue">
+                        <div class="rain-back"></div>
+                        <div class="rain-curr" style="height: 33px;"></div>
+                        <div class="rain-number">4</div>
+                      </div>
+                    </td>
+                    <td class="hourly-details-row-item">0%</td>
+                    <td class="hourly-details-row-item">7%</td>
+                    <td class="hourly-details-row-item">
+                      <div class="wind-red"></div>
+                      <div class="wind-number">14 km/h</div>
+                    </td>
+                    <td class="hourly-details-row-item"><div class="wind-number">14 km/h</div></td>
+                    <td class="hourly-details-row-item">
+                      <svg class="hourly-arrow hourly-arrow-white" style="transform: rotate(-45deg);">
+                        <use href="img/arrows.svg#hourly-arrow"></use>
+                      </svg>
+                    </td>
+                    <td class="hourly-details-row-item">7%</td>
+                    <td class="hourly-details-row-item">1023 mb 
+                      <svg class="arrow-down">
+                        <use href="img/arrows.svg#arrow-up"></use>
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr class="hourly-details-row">
+                    <td class="hourly-details-row-item">00:00</td>
+                    <td class="hourly-details-row-item">
+                      <img src="img/cloud.svg" width="32" alt="">
+                      <p class="hourly-comment">Cloudy</p>
+                    </td>
+                    <td class="hourly-details-row-item">
+                      <p class="hourly-temp">4 °C</p>
+                      <p class="hourly-comment">Feels -22 °C</p>
+                    </td>
+                    <td class="hourly-details-row-item">
+                      <div class="rain-orange">
+                        <div class="rain-back"></div>
+                        <div class="rain-curr" style="height: 33px;"></div>
+                        <div class="rain-number">8</div>
+                      </div>
+                    </td>
+                    <td class="hourly-details-row-item">0%</td>
+                    <td class="hourly-details-row-item">7%</td>
+                    <td class="hourly-details-row-item">
+                      <div class="wind-brown"></div>
+                      <div class="wind-number">14 km/h</div>
+                    </td>
+                    <td class="hourly-details-row-item"><div class="wind-number">14 km/h</div></td>
+                    <td class="hourly-details-row-item">
+                      <div class="hourly-arrow">
+                        <svg class="hourly-arrow hourly-arrow-white"  style="transform: rotate(45deg);">
+                          <use href="img/arrows.svg#hourly-arrow"></use>
+                        </svg>
+                      </div>
+                    </td>
+                    <td class="hourly-details-row-item">7%</td>
+                    <td class="hourly-details-row-item">1023 mb 
+                      <svg class="arrow-up">
+                        <use href="img/arrows.svg#arrow-up"></use>
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr class="hourly-details-row">
+                    <td class="hourly-details-row-item">00:00</td>
+                    <td class="hourly-details-row-item">
+                      <img src="img/cloud.svg" width="32" alt="">
+                      <p class="hourly-comment">Cloudy</p>
+                    </td>
+                    <td class="hourly-details-row-item">
+                      <p class="hourly-temp">4 °C</p>
+                      <p class="hourly-comment">Feels -22 °C</p>
+                    </td>
+                    <td class="hourly-details-row-item">
+                      <div class="rain-blue">
+                        <div class="rain-back"></div>
+                        <div class="rain-curr" style="height: 25px;"></div>
+                        <div class="rain-number">3</div>
+                      </div>
+                    </td>
+                    <td class="hourly-details-row-item">0%</td>
+                    <td class="hourly-details-row-item">7%</td>
+                    <td class="hourly-details-row-item">
+                      <div class="wind-red"></div>
+                      <div class="wind-number">14 km/h</div>
+                    </td>
+                    <td class="hourly-details-row-item"><div class="wind-number">14 km/h</div></td>
+                    <td class="hourly-details-row-item">
+                      <div class="hourly-arrow">
+                        <svg class="hourly-arrow hourly-arrow-white"  style="transform: rotate(45deg);">
+                          <use href="img/arrows.svg#hourly-arrow"></use>
+                        </svg>
+                      </div>
+                    </td>
+                    <td class="hourly-details-row-item">7%</td>
+                    <td class="hourly-details-row-item">1023 mb 
+                      <svg class="arrow-down">
+                        <use href="img/arrows.svg#arrow-up"></use>
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr class="hourly-details-row">
+                    <td class="hourly-details-row-item">00:00</td>
+                    <td class="hourly-details-row-item">
+                      <img src="img/cloud.svg" width="32" alt="">
+                      <p class="hourly-comment">Cloudy</p>
+                    </td>
+                    <td class="hourly-details-row-item">
+                      <p class="hourly-temp">4 °C</p>
+                      <p class="hourly-comment">Feels -22 °C</p>
+                    </td>
+                    <td class="hourly-details-row-item">
+                      <div class="rain-red">
+                        <div class="rain-back"></div>
+                        <div class="rain-curr" style="height: 33px;"></div>
+                        <div class="rain-number">10</div>
+                      </div>
+                    </td>
+                    <td class="hourly-details-row-item">0%</td>
+                    <td class="hourly-details-row-item">7%</td>
+                    <td class="hourly-details-row-item"><div>14 km/h</div></td>
+                    <td class="hourly-details-row-item"><div>14 km/h</div></td>
+                    <td class="hourly-details-row-item">
+                      <svg class="hourly-arrow" style="transform: rotate(135deg);">
+                        <use href="img/arrows.svg#hourly-arrow"></use>
+                      </svg>
+                    </td>
+                    <td class="hourly-details-row-item">7%</td>
+                    <td class="hourly-details-row-item">1023 mb 
+                      <svg class="arrow-down">
+                        <use href="img/arrows.svg#arrow-up"></use>
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr class="hourly-details-row">
+                    <td class="hourly-details-row-item">00:00</td>
+                    <td class="hourly-details-row-item">
+                      <img src="img/cloud.svg" width="32" alt="">
+                      <p class="hourly-comment">Cloudy</p>
+                    </td>
+                    <td class="hourly-details-row-item">
+                      <p class="hourly-temp">4 °C</p>
+                      <p class="hourly-comment">Feels -22 °C</p>
+                    </td>
+                    <td class="hourly-details-row-item">
+                      <div class="rain-blue">
+                        <div class="rain-back"></div>
+                        <div class="rain-curr" style="height: 33px;"></div>
+                        <div class="rain-number">4</div>
+                      </div>
+                    </td>
+                    <td class="hourly-details-row-item">0%</td>
+                    <td class="hourly-details-row-item">7%</td>
+                    <td class="hourly-details-row-item">
+                      <div class="wind-orange"></div>
+                      <div class="wind-number">14 km/h</div>
+                    </td>
+                    <td class="hourly-details-row-item"><div class="wind-number">14 km/h</div></td>
+                    <td class="hourly-details-row-item">
+                      <div class="hourly-arrow">
+                        <svg class="hourly-arrow hourly-arrow-white"  style="transform: rotate(45deg);">
+                          <use href="img/arrows.svg#hourly-arrow"></use>
+                        </svg>
+                      </div>
+                    </td>
+                    <td class="hourly-details-row-item">7%</td>
+                    <td class="hourly-details-row-item">1023 mb 
+                      <svg class="arrow-up">
+                        <use href="img/arrows.svg#arrow-up"></use>
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr class="hourly-details-row">
+                    <td class="hourly-details-row-item">00:00</td>
+                    <td class="hourly-details-row-item">
+                      <img src="img/cloud.svg" width="32" alt="">
+                      <p class="hourly-comment">Cloudy</p>
+                    </td>
+                    <td class="hourly-details-row-item">
+                      <p class="hourly-temp">4 °C</p>
+                      <p class="hourly-comment">Feels -22 °C</p>
+                    </td>
+                    <td class="hourly-details-row-item">
+                      <div class="rain-blue">
+                        <div class="rain-back"></div>
+                        <div class="rain-curr" style="height: 25px;"></div>
+                        <div class="rain-number">3</div>
+                      </div>
+                    </td>
+                    <td class="hourly-details-row-item">0%</td>
+                    <td class="hourly-details-row-item">7%</td>
+                    <td class="hourly-details-row-item">
+                      <div class="wind-red"></div>
+                      <div class="wind-number">14 km/h</div>
+                    </td>
+                    <td class="hourly-details-row-item"><div class="wind-number">14 km/h</div></td>
+                    <td class="hourly-details-row-item">
+                      <div class="hourly-arrow">
+                        <svg class="hourly-arrow hourly-arrow-white"  style="transform: rotate(45deg);">
+                          <use href="img/arrows.svg#hourly-arrow"></use>
+                        </svg>
+                      </div>
+                    </td>
+                    <td class="hourly-details-row-item">7%</td>
+                    <td class="hourly-details-row-item">1023 mb 
+                      <svg class="arrow-down">
+                        <use href="img/arrows.svg#arrow-up"></use>
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr class="hourly-details-row">
+                    <td class="hourly-details-row-item">00:00</td>
+                    <td class="hourly-details-row-item">
+                      <img src="img/cloud.svg" width="32" alt="">
+                      <p class="hourly-comment">Cloudy</p>
+                    </td>
+                    <td class="hourly-details-row-item">
+                      <p class="hourly-temp">4 °C</p>
+                      <p class="hourly-comment">Feels -22 °C</p>
+                    </td>
+                    <td class="hourly-details-row-item">
+                      <div class="rain-orange">
+                        <div class="rain-back"></div>
+                        <div class="rain-curr" style="height: 33px;"></div>
+                        <div class="rain-number">8</div>
+                      </div>
+                    </td>
+                    <td class="hourly-details-row-item">0%</td>
+                    <td class="hourly-details-row-item">7%</td>
+                    <td class="hourly-details-row-item"><div>14 km/h</div></td>
+                    <td class="hourly-details-row-item"><div>14 km/h</div></td>
+                    <td class="hourly-details-row-item">
+                      <svg class="hourly-arrow" style="transform: rotate(135deg);">
+                        <use href="img/arrows.svg#hourly-arrow"></use>
+                      </svg>
+                    </td>
+                    <td class="hourly-details-row-item">7%</td>
+                    <td class="hourly-details-row-item">1023 mb 
+                      <svg class="arrow-down">
+                        <use href="img/arrows.svg#arrow-up"></use>
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr class="hourly-details-row">
+                    <td class="hourly-details-row-item">00:00</td>
+                    <td class="hourly-details-row-item">
+                      <img src="img/cloud.svg" width="32" alt="">
+                      <p class="hourly-comment">Cloudy</p>
+                    </td>
+                    <td class="hourly-details-row-item">
+                      <p class="hourly-temp">4 °C</p>
+                      <p class="hourly-comment">Feels -22 °C</p>
+                    </td>
+                    <td class="hourly-details-row-item">
+                      <div class="rain-blue">
+                        <div class="rain-back"></div>
+                        <div class="rain-curr" style="height: 33px;"></div>
+                        <div class="rain-number">4</div>
+                      </div>
+                    </td>
+                    <td class="hourly-details-row-item">0%</td>
+                    <td class="hourly-details-row-item">7%</td>
+                    <td class="hourly-details-row-item">
+                      <div class="wind-orange"></div>
+                      <div class="wind-number">14 km/h</div>
+                    </td>
+                    <td class="hourly-details-row-item"><div class="wind-number">14 km/h</div></td>
+                    <td class="hourly-details-row-item">
+                      <div class="hourly-arrow">
+                        <svg class="hourly-arrow hourly-arrow-white"  style="transform: rotate(45deg);">
+                          <use href="img/arrows.svg#hourly-arrow"></use>
+                        </svg>
+                      </div>
+                    </td>
+                    <td class="hourly-details-row-item">7%</td>
+                    <td class="hourly-details-row-item">1023 mb 
+                      <svg class="arrow-up">
+                        <use href="img/arrows.svg#arrow-up"></use>
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr class="hourly-details-row">
+                    <td class="hourly-details-row-item">00:00</td>
+                    <td class="hourly-details-row-item">
+                      <img src="img/cloud.svg" width="32" alt="">
+                      <p class="hourly-comment">Cloudy</p>
+                    </td>
+                    <td class="hourly-details-row-item">
+                      <p class="hourly-temp">4 °C</p>
+                      <p class="hourly-comment">Feels -22 °C</p>
+                    </td>
+                    <td class="hourly-details-row-item">
+                      <div class="rain-blue">
+                        <div class="rain-back"></div>
+                        <div class="rain-curr" style="height: 25px;"></div>
+                        <div class="rain-number">3</div>
+                      </div>
+                    </td>
+                    <td class="hourly-details-row-item">0%</td>
+                    <td class="hourly-details-row-item">7%</td>
+                    <td class="hourly-details-row-item">
+                      <div class="wind-red"></div>
+                      <div class="wind-number">14 km/h</div>
+                    </td>
+                    <td class="hourly-details-row-item"><div class="wind-number">14 km/h</div></td>
+                    <td class="hourly-details-row-item">
+                      <div class="hourly-arrow">
+                        <svg class="hourly-arrow hourly-arrow-white"  style="transform: rotate(45deg);">
+                          <use href="img/arrows.svg#hourly-arrow"></use>
+                        </svg>
+                      </div>
+                    </td>
+                    <td class="hourly-details-row-item">7%</td>
+                    <td class="hourly-details-row-item">1023 mb 
+                      <svg class="arrow-down">
+                        <use href="img/arrows.svg#arrow-up"></use>
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr class="hourly-details-row">
+                    <td class="hourly-details-row-item">00:00</td>
+                    <td class="hourly-details-row-item">
+                      <img src="img/cloud.svg" width="32" alt="">
+                      <p class="hourly-comment">Cloudy</p>
+                    </td>
+                    <td class="hourly-details-row-item">
+                      <p class="hourly-temp">4 °C</p>
+                      <p class="hourly-comment">Feels -22 °C</p>
+                    </td>
+                    <td class="hourly-details-row-item">
+                      <div class="rain-orange">
+                        <div class="rain-back"></div>
+                        <div class="rain-curr" style="height: 33px;"></div>
+                        <div class="rain-number">8</div>
+                      </div>
+                    </td>
+                    <td class="hourly-details-row-item">0%</td>
+                    <td class="hourly-details-row-item">7%</td>
+                    <td class="hourly-details-row-item"><div>14 km/h</div></td>
+                    <td class="hourly-details-row-item"><div>14 km/h</div></td>
+                    <td class="hourly-details-row-item">
+                      <svg class="hourly-arrow" style="transform: rotate(135deg);">
+                        <use href="img/arrows.svg#hourly-arrow"></use>
+                      </svg>
+                    </td>
+                    <td class="hourly-details-row-item">7%</td>
+                    <td class="hourly-details-row-item">1023 mb 
+                      <svg class="arrow-down">
+                        <use href="img/arrows.svg#arrow-up"></use>
+                      </svg>
+                    </td>
+                  </tr>                                                      
+                </table>
+
+
+
+              </div>
+
+            </div>
+          </div>
+          
+
+        </div>
+        <div class="col-md-3 aside">
+          <div class="aside-sticky">
+            <div class=" box weather-now-uv">
+              <h3 class="head3"> Ultraviolet Index</h3>
+              <div class="progress">
+                <span class="day-uv">Mon: </span><div class="progress-bar" role="progressbar" style="width: 9%; background-color: #4B9100;" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100">1</div>
+              </div>
+              <div class="progress">
+                <span class="day-uv">Tue: </span><div class="progress-bar" role="progressbar" style="width: 90%; background-color: #4B2B51;" aria-valuenow="11" aria-valuemin="0" aria-valuemax="100">11</div>
+              </div>
+              <div class="progress">
+                <span class="day-uv">Wed: </span><div class="progress-bar" role="progressbar" style="width: 72%; background-color: #F24841;" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100">8</div>
+              </div>
+              <div class="progress">
+                <span class="day-uv">Thu: </span><div class="progress-bar" role="progressbar" style="width: 36%; background-color: #EAE462;" aria-valuenow="4" aria-valuemin="0" aria-valuemax="100">4</div>
+              </div>
+              <div class="progress">
+                <span class="day-uv">Fri: </span><div class="progress-bar" role="progressbar" style="width: 18%; background-color: #9FC920;" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100">2</div>
+              </div>
+              <hr class="uv-scale-hr">
+              <img class="uv-scale-img" src="img/scale.svg" alt="">
+            </div>
+            <div class="box weather-now-holiday">
+              <img class="holiday-img" src="img/holiday.png" alt="">
+              <p class="holiday"> Book flights and hotels for Minsk</p>
+            </div>
+          </div>
+    
+
+          <div class="box box-rec">
+            Some AD
+          </div>
+          <div class="box box-rec">
+            Some AD
+          </div>
+          <div class="box box-rec">
+            Some AD
+          </div>
+    
+    
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer>
+    <div class="container-fluid footer-container">
+      <div class="container w1170"> 
+        <div class="row no-gutters footer-row">
+          <div class="col">
+            <div class="footer-main">
+              <div class="footer-main-content">
+                <div class="footer-main-content-1">
+                  <img src="img/logo.svg" alt="" class="logo-footer">
+                  <a href="https://play.google.com/store/apps/details?id=com.wwoandroid" target="_blank"><img src="img/Google.svg" alt="" class="footer-img-shop"></a>
+                  <a href="https://apps.apple.com/gb/app/worldweatheronline/id937165295" target="_blank"><img src="img/Apple.svg" alt="" class="footer-img-shop"></a>
+                  <a href="https://www.youtube.com/c/Worldweatheronline" target="_blank"><img src="img/youtube.svg" alt="" class="footer-img-shop"></a>
+                </div>
+                <div class="footer-main-content-2">
+                  <h3 class="footer-header">Navigation</h3>
+                  <a href="" class="footer-link">About</a>
+                  <a href="" class="footer-link">Weather Blog</a>
+                  <a href="" class="footer-link">Holiday Guides</a>
+                  <a href="" class="footer-link">Sports Weather</a>
+                  <a href="" class="footer-link">Historical Weather</a>
+                </div>
+                <div class="footer-main-content-3">
+                  <h3 class="footer-header">Weather API</h3>
+                  <a href="" class="footer-link">Local weather API</a>
+                  <a href="" class="footer-link">Monthly averages</a>
+                  <a href="" class="footer-link">Historical weather API</a>
+                  <a href="" class="footer-link">Marine weather API</a>
+                  <a href="" class="footer-link">SKI weather API</a>
+                  <a href="" class="footer-link">Search API</a>
+                  <a href="" class="footer-link">TimeZone API</a>
+                  <a href="" class="footer-link">Astronony API</a>
+                </div>                
+                <div class="footer-aside">
+                  <h3 class="footer-header">Top holiday</h3>
+                  <div class="footer-aside-content">
+                    <div class="footer-aside-content-1">
+                      <a href="" class="footer-link">Zurich</a>
+                      <a href="" class="footer-link">New York</a>
+                      <a href="" class="footer-link">Miami</a>
+                      <a href="" class="footer-link">Puerto de la Cruz</a>
+                      <a href="" class="footer-link">Tokio</a>
+                      <a href="" class="footer-link">London</a>
+                    </div>
+                    <div class="footer-aside-content-2">
+                      <a href="" class="footer-link">Dubai</a>
+                      <a href="" class="footer-link">Istanbul</a>
+                      <a href="" class="footer-link">Paris</a>
+                      <a href="" class="footer-link">Paphos</a>
+                      <a href="" class="footer-link">Rome</a>
+                      <a href="" class="footer-link">Washington</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col footer-copyright">
+            <div class="footer-copyright-item">
+              <p class="footer-copyright-text">Copyright © 2021. All rights reserved.</p>
+              <ul class="footer-menu">
+                <a class="footer-menu-link" href=""><li class="footer-menu-item">Contact Us</li></a>
+                <a class="footer-menu-link" href=""><li class="footer-menu-item">Privacy Policy</li></a>
+                <a class="footer-menu-link" href=""><li class="footer-menu-item">Website T&C</li></a>
+              </ul>
+            </div>
+            <div class="footer-copyright-item">
+              <a href="facebook.com"><img src="img/facebook.svg" alt="" class="footer-social"></a>
+              <a href="twitter/com"><img src="img/twitter.svg" alt="" class="footer-social"></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>   
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/wwo.js"></script>
+  <script>
+
+    </script>
+
+</body>
+</html>
