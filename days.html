@@ -312,7 +312,7 @@
     <div class="container w1170">
       <div class="row no-gutters">
         <div class="col main">
-          <div class="box forecast-box">
+          <div class="box days-box">
             <div class="forecast-menu">
               <a href="index.html" class="forecast-menu-item">10 days weather</a>
               <a href="hourly.html" class="forecast-menu-item">Hourly weather</a>
@@ -329,47 +329,150 @@
               <hr class="weather-days-hr">
               <h3 class="days-header">Friday, 24 april, 2020</h3>
 
-              <div class="hourly-details">
-                <table class="hourly-details-table">
-                  <tr class="hourly-details-row days-details-row-header">
-                    <td class="hourly-details-row-header-item">Time</td>
-                    <td class="hourly-details-row-header-item">&nbsp;</td>
-                    <td class="hourly-details-row-header-item">Forecast</td>
-                    <td class="hourly-details-row-header-item">Rain</td>
-                    <td class="hourly-details-row-header-item">Rain %</td>
-                    <td class="hourly-details-row-header-item">Cloud</td>
-                    <td class="hourly-details-row-header-item">Wind</td>
-                    <td class="hourly-details-row-header-item">Gust</td>
-                    <td class="hourly-details-row-header-item" style="width: 85px;">Dir</td>
+              <div class="days-details">
+                <table class="days-details-table">
+                  <tr class="days-details-row days-details-row-header">
+                    <td class="days-details-row-header-item" style="text-align: left;
+                    padding-left: 21px;">Time</td>
+                    <td class="days-details-row-header-item" style="width: 80px;">&nbsp;</td>
+                    <td class="days-details-row-header-item" style="padding-left: 8px; text-align: left; width: 148px;">Forecast</td>
+                    <td class="days-details-row-header-item">Rain</td>
+                    <td class="days-details-row-header-item">Rain %</td>
+                    <td class="days-details-row-header-item">Cloud</td>
+                    <td class="days-details-row-header-item">Wind</td>
+                    <td class="days-details-row-header-item">Gust</td>
+                    <td class="days-details-row-header-item" style="width: 85px;">Dir</td>
                   </tr>
-                  <tr class="hourly-details-row">
-                    <td class="days-details-row-item">
-                      <p class="hourly-comment">Morning</p>
-                      <p class="hourly-temp">+7°...+16°</p>
+                  <tr class="divider">
+                    <td style="height: 15px;"></td>
+                  </tr>
+                  <tr class="days-details-row">
+                    <td class="days-details-row-item" style="width: 147px;">
+                      <p class="days-comment">Morning</p>
+                      <p class="days-temp">+7°...+16°</p>
                     </td>
                     <td class="days-details-row-item">
-                        <div class="days-table-forecast-img"><img src="img/sun-cloud.svg" width="49" alt=""></div>
+                       <img class="days-table-forecast-img" src="img/sun-cloud.svg" alt="">
                     </td>
                     <td>
-                      <div class="days-table-forecast-p">Patchy light rain with thunder</div>
+                      <p class="days-table-forecast-p">Patchy light rain with thunder</p>
                     </td>
                     <td class="days-details-row-item">
-                      <div class="rain-blue">
-                        <div class="rain-back"></div>
-                        <div class="rain-curr" style="height: 33px;"></div>
-                        <div class="rain-number">4</div>
+                      <div class="days-rain-blue">
+                        <div class="days-rain-back"></div>
+                        <div class="days-rain-curr" style="height: 33px;"></div>
+                        <div class="days-rain-number">4</div>
                       </div>
                     </td>
                     <td class="days-details-row-item">0%</td>
                     <td class="days-details-row-item">7%</td>
                     <td class="days-details-row-item">
-                      <div class="wind-orange"></div>
-                      <div class="wind-number">35 km/h</div>
+                      <div class="days-wind-orange"></div>
+                      <div class="days-wind-number">35 km/h</div>
                     </td>
-                    <td class="days-details-row-item"><div class="wind-number">50 km/h</div></td>
+                    <td class="days-details-row-item"><div class="days-wind-number">50 km/h</div></td>
                     <td class="days-details-row-item">
-                      <div class="hourly-arrow">
-                        <svg class="hourly-arrow hourly-arrow-white"  style="transform: rotate(-45deg);">
+                      <div class="days-arrow-box">
+                        <svg class="days-arrow days-arrow-white"  style="transform: rotate(0deg);">
+                          <use href="img/arrows.svg#hourly-arrow"></use>
+                        </svg>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="days-details-row">
+                    <td class="days-details-row-item" style="width: 147px;">
+                      <p class="days-comment">Morning</p>
+                      <p class="days-temp">+7°...+16°</p>
+                    </td>
+                    <td class="days-details-row-item">
+                       <img class="days-table-forecast-img" src="img/sun-cloud.svg" alt="">
+                    </td>
+                    <td>
+                      <p class="days-table-forecast-p">Patchy light rain with thunder</p>
+                    </td>
+                    <td class="days-details-row-item">
+                      <div class="days-rain-blue">
+                        <div class="days-rain-back"></div>
+                        <div class="days-rain-curr" style="height: 33px;"></div>
+                        <div class="days-rain-number">4</div>
+                      </div>
+                    </td>
+                    <td class="days-details-row-item">0%</td>
+                    <td class="days-details-row-item">7%</td>
+                    <td class="days-details-row-item">
+                      <div class="days-wind-red"></div>
+                      <div class="days-wind-number">35 km/h</div>
+                    </td>
+                    <td class="days-details-row-item"><div class="days-wind-number">50 km/h</div></td>
+                    <td class="days-details-row-item">
+                      <div class="days-arrow-box">
+                        <svg class="days-arrow days-arrow-white"  style="transform: rotate(-45deg);">
+                          <use href="img/arrows.svg#hourly-arrow"></use>
+                        </svg>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="days-details-row">
+                    <td class="days-details-row-item" style="width: 147px;">
+                      <p class="days-comment">Morning</p>
+                      <p class="days-temp">+7°...+16°</p>
+                    </td>
+                    <td class="days-details-row-item">
+                       <img class="days-table-forecast-img" src="img/sun-cloud.svg" alt="">
+                    </td>
+                    <td>
+                      <p class="days-table-forecast-p">Patchy light rain with thunder</p>
+                    </td>
+                    <td class="days-details-row-item">
+                      <div class="days-rain-blue">
+                        <div class="days-rain-back"></div>
+                        <div class="days-rain-curr" style="height: 33px;"></div>
+                        <div class="days-rain-number">4</div>
+                      </div>
+                    </td>
+                    <td class="days-details-row-item">0%</td>
+                    <td class="days-details-row-item">7%</td>
+                    <td class="days-details-row-item">
+                      <div class="days-wind-orange"></div>
+                      <div class="days-wind-number">35 km/h</div>
+                    </td>
+                    <td class="days-details-row-item"><div class="days-wind-number">50 km/h</div></td>
+                    <td class="days-details-row-item">
+                      <div class="days-arrow-box">
+                        <svg class="days-arrow days-arrow-white"  style="transform: rotate(0deg);">
+                          <use href="img/arrows.svg#hourly-arrow"></use>
+                        </svg>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="days-details-row">
+                    <td class="days-details-row-item" style="width: 147px;">
+                      <p class="days-comment">Morning</p>
+                      <p class="days-temp">+7°...+16°</p>
+                    </td>
+                    <td class="days-details-row-item">
+                       <img class="days-table-forecast-img" src="img/sun-cloud.svg" alt="">
+                    </td>
+                    <td>
+                      <p class="days-table-forecast-p">Patchy light rain with thunder</p>
+                    </td>
+                    <td class="days-details-row-item">
+                      <div class="days-rain-blue">
+                        <div class="days-rain-back"></div>
+                        <div class="days-rain-curr" style="height: 33px;"></div>
+                        <div class="days-rain-number">4</div>
+                      </div>
+                    </td>
+                    <td class="days-details-row-item">0%</td>
+                    <td class="days-details-row-item">7%</td>
+                    <td class="days-details-row-item">
+                      <div class="days-wind-brown"></div>
+                      <div class="days-wind-number">35 km/h</div>
+                    </td>
+                    <td class="days-details-row-item"><div class="days-wind-number">50 km/h</div></td>
+                    <td class="days-details-row-item">
+                      <div class="days-arrow-box">
+                        <svg class="days-arrow days-arrow-white"  style="transform: rotate(-135deg);">
                           <use href="img/arrows.svg#hourly-arrow"></use>
                         </svg>
                       </div>
@@ -378,13 +481,252 @@
 
                                                     
                 </table>
+              </div>
 
-
-
+              <hr class="weather-table-hr">
+              <div class="days-inform">
+                <div class="days-uv">Ultraviolet Index: 3 (middle) <div class="days-uv-img"></div></div>
+                <div class="days-magnet">Magnetic field: <span>calm</span></div>
+                <div class="days-rise"><img src="img/sun-rise.svg" alt=""> <span>06:55 AM</span></div>
+                <div class="days-set"><img src="img/sun-set.svg" alt=""> <span>08:03 PM</span></div>
               </div>
 
             </div>
           </div>
+
+          <div class="box box-rec">AD</div>
+
+          <div class="box days-box">
+            <div class="city-hourly-weather">
+              <h3 class="days-header">Friday, 24 april, 2020</h3>
+
+              <div class="days-details">
+                <table class="days-details-table">
+                  <tr class="days-details-row days-details-row-header">
+                    <td class="days-details-row-header-item" style="text-align: left;
+                    padding-left: 21px;">Time</td>
+                    <td class="days-details-row-header-item" style="width: 80px;">&nbsp;</td>
+                    <td class="days-details-row-header-item" style="padding-left: 8px; text-align: left; width: 148px;">Forecast</td>
+                    <td class="days-details-row-header-item">Rain</td>
+                    <td class="days-details-row-header-item">Rain %</td>
+                    <td class="days-details-row-header-item">Cloud</td>
+                    <td class="days-details-row-header-item">Wind</td>
+                    <td class="days-details-row-header-item">Gust</td>
+                    <td class="days-details-row-header-item" style="width: 85px;">Dir</td>
+                  </tr>
+                  <tr class="divider">
+                    <td style="height: 15px;"></td>
+                  </tr>
+                  <tr class="days-details-row">
+                    <td class="days-details-row-item" style="width: 147px;">
+                      <p class="days-comment">Morning</p>
+                      <p class="days-temp">+7°...+16°</p>
+                    </td>
+                    <td class="days-details-row-item">
+                       <img class="days-table-forecast-img" src="img/sun-cloud.svg" alt="">
+                    </td>
+                    <td>
+                      <p class="days-table-forecast-p">Patchy light rain with thunder</p>
+                    </td>
+                    <td class="days-details-row-item">
+                      <div class="days-rain-blue">
+                        <div class="days-rain-back"></div>
+                        <div class="days-rain-curr" style="height: 33px;"></div>
+                        <div class="days-rain-number">4</div>
+                      </div>
+                    </td>
+                    <td class="days-details-row-item">0%</td>
+                    <td class="days-details-row-item">7%</td>
+                    <td class="days-details-row-item">
+                      <div class="days-wind-orange"></div>
+                      <div class="days-wind-number">35 km/h</div>
+                    </td>
+                    <td class="days-details-row-item"><div class="days-wind-number">50 km/h</div></td>
+                    <td class="days-details-row-item">
+                      <div class="days-arrow-box">
+                        <svg class="days-arrow days-arrow-white"  style="transform: rotate(0deg);">
+                          <use href="img/arrows.svg#hourly-arrow"></use>
+                        </svg>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="days-details-row">
+                    <td class="days-details-row-item" style="width: 147px;">
+                      <p class="days-comment">Morning</p>
+                      <p class="days-temp">+7°...+16°</p>
+                    </td>
+                    <td class="days-details-row-item">
+                       <img class="days-table-forecast-img" src="img/sun-cloud.svg" alt="">
+                    </td>
+                    <td>
+                      <p class="days-table-forecast-p">Patchy light rain with thunder</p>
+                    </td>
+                    <td class="days-details-row-item">
+                      <div class="days-rain-blue">
+                        <div class="days-rain-back"></div>
+                        <div class="days-rain-curr" style="height: 33px;"></div>
+                        <div class="days-rain-number">4</div>
+                      </div>
+                    </td>
+                    <td class="days-details-row-item">0%</td>
+                    <td class="days-details-row-item">7%</td>
+                    <td class="days-details-row-item">
+                      <div class="days-wind-red"></div>
+                      <div class="days-wind-number">35 km/h</div>
+                    </td>
+                    <td class="days-details-row-item"><div class="days-wind-number">50 km/h</div></td>
+                    <td class="days-details-row-item">
+                      <div class="days-arrow-box">
+                        <svg class="days-arrow days-arrow-white"  style="transform: rotate(-45deg);">
+                          <use href="img/arrows.svg#hourly-arrow"></use>
+                        </svg>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="days-details-row">
+                    <td class="days-details-row-item" style="width: 147px;">
+                      <p class="days-comment">Morning</p>
+                      <p class="days-temp">+7°...+16°</p>
+                    </td>
+                    <td class="days-details-row-item">
+                       <img class="days-table-forecast-img" src="img/sun-cloud.svg" alt="">
+                    </td>
+                    <td>
+                      <p class="days-table-forecast-p">Patchy light rain with thunder</p>
+                    </td>
+                    <td class="days-details-row-item">
+                      <div class="days-rain-blue">
+                        <div class="days-rain-back"></div>
+                        <div class="days-rain-curr" style="height: 33px;"></div>
+                        <div class="days-rain-number">4</div>
+                      </div>
+                    </td>
+                    <td class="days-details-row-item">0%</td>
+                    <td class="days-details-row-item">7%</td>
+                    <td class="days-details-row-item">
+                      <div>35 km/h</div>
+                    </td>
+                    <td class="days-details-row-item"><div>50 km/h</div></td>
+                    <td class="days-details-row-item">
+                      <div class="days-arrow-box">
+                        <svg class="days-arrow"  style="transform: rotate(-45deg);">
+                          <use href="img/arrows.svg#hourly-arrow"></use>
+                        </svg>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="days-details-row">
+                    <td class="days-details-row-item" style="width: 147px;">
+                      <p class="days-comment">Morning</p>
+                      <p class="days-temp">+7°...+16°</p>
+                    </td>
+                    <td class="days-details-row-item">
+                       <img class="days-table-forecast-img" src="img/sun-cloud.svg" alt="">
+                    </td>
+                    <td>
+                      <p class="days-table-forecast-p">Patchy light rain with thunder</p>
+                    </td>
+                    <td class="days-details-row-item">
+                      <div class="days-rain-blue">
+                        <div class="days-rain-back"></div>
+                        <div class="days-rain-curr" style="height: 33px;"></div>
+                        <div class="days-rain-number">4</div>
+                      </div>
+                    </td>
+                    <td class="days-details-row-item">0%</td>
+                    <td class="days-details-row-item">7%</td>
+                    <td class="days-details-row-item">
+                      <div>35 km/h</div>
+                    </td>
+                    <td class="days-details-row-item"><div>50 km/h</div></td>
+                    <td class="days-details-row-item">
+                      <div class="days-arrow-box">
+                        <svg class="days-arrow"  style="transform: rotate(-45deg);">
+                          <use href="img/arrows.svg#hourly-arrow"></use>
+                        </svg>
+                      </div>
+                    </td>
+                  </tr>
+
+                                                    
+                </table>
+              </div>
+
+              <hr class="weather-table-hr">
+              <div class="days-inform">
+                <div class="days-uv">Ultraviolet Index: 3 (middle) <div class="days-uv-img"></div></div>
+                <div class="days-magnet">Magnetic field: <span>calm</span></div>
+                <div class="days-rise"><img src="img/sun-rise.svg" alt=""> <span>06:55 AM</span></div>
+                <div class="days-set"><img src="img/sun-set.svg" alt=""> <span>08:03 PM</span></div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="box days-box">
+            <div class="days-collapse">
+              <div class="days-collapse-date">Wednesday, 29 april, 2020</div>
+              <div class="days-collapse-temp"><span>Min/max</span>+16°…+12°</div>
+              <div class="days-collapse-forecast">Patchy light rain with thunder</div>
+              <div class="days-collapse-img"><img src="img/sun-cloud.svg" alt=""></div>
+            </div>
+          </div>
+          <div class="box days-box">
+            <div class="days-collapse">
+              <div class="days-collapse-date">Wednesday, 29 april, 2020</div>
+              <div class="days-collapse-temp"><span>Min/max</span>+16°…+12°</div>
+              <div class="days-collapse-forecast">Patchy light rain with thunder</div>
+              <div class="days-collapse-img"><img src="img/sun-cloud.svg" alt=""></div>
+            </div>
+          </div>
+          <div class="box days-box">
+            <div class="days-collapse">
+              <div class="days-collapse-date">Wednesday, 29 april, 2020</div>
+              <div class="days-collapse-temp"><span>Min/max</span>+16°…+12°</div>
+              <div class="days-collapse-forecast">Patchy light rain with thunder</div>
+              <div class="days-collapse-img"><img src="img/sun-cloud.svg" alt=""></div>
+            </div>
+          </div>
+
+          <div class="box box-rec">AD</div>
+
+          <div class="box days-box">
+            <div class="days-collapse">
+              <div class="days-collapse-date">Wednesday, 29 april, 2020</div>
+              <div class="days-collapse-temp"><span>Min/max</span>+16°…+12°</div>
+              <div class="days-collapse-forecast">Patchy light rain with thunder</div>
+              <div class="days-collapse-img"><img src="img/sun-cloud.svg" alt=""></div>
+            </div>
+          </div>
+          <div class="box days-box">
+            <div class="days-collapse">
+              <div class="days-collapse-date">Wednesday, 29 april, 2020</div>
+              <div class="days-collapse-temp"><span>Min/max</span>+16°…+12°</div>
+              <div class="days-collapse-forecast">Patchy light rain with thunder</div>
+              <div class="days-collapse-img"><img src="img/sun-cloud.svg" alt=""></div>
+            </div>
+          </div>
+          <div class="box days-box">
+            <div class="days-collapse">
+              <div class="days-collapse-date">Wednesday, 29 april, 2020</div>
+              <div class="days-collapse-temp"><span>Min/max</span>+16°…+12°</div>
+              <div class="days-collapse-forecast">Patchy light rain with thunder</div>
+              <div class="days-collapse-img"><img src="img/sun-cloud.svg" alt=""></div>
+            </div>
+          </div>
+
+          <div class="box box-rec">AD</div>
+
+          <div class="box days-box">
+            <div class="days-collapse">
+              <div class="days-collapse-date">Wednesday, 29 april, 2020</div>
+              <div class="days-collapse-temp"><span>Min/max</span>+16°…+12°</div>
+              <div class="days-collapse-forecast">Patchy light rain with thunder</div>
+              <div class="days-collapse-img"><img src="img/sun-cloud.svg" alt=""></div>
+            </div>
+          </div>
+
+
           
 
         </div>
