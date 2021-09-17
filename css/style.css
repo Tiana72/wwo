@@ -1631,29 +1631,59 @@ h3.footer-header {
     color: #FFFFFF;
 }
 .graph-item-wind {
-    width: 28px;
-    height: 71px;
-    background: #F2F2F2;
-    border-radius: 5px;
+    position: relative;
     margin: 0 auto;
+    height: 71px;
     margin-top: 25px;
 }
-.graph-arrow {
+.graph-wind-back {
+    position: absolute;
+    width: 28px;
+    height: 71px;
+    left: calc((100% - 28px) / 2);
+    top: calc((100% - 71px) / 2);
+    background: #F2F2F2; 
+    border-radius: 5px;
+}
+.graph-wind-curr {
+    position: absolute;
+    width: 28px;
+    height: 35px;
+    border-bottom: 1px solid #e8e8e8;
+    left: calc((100% - 28px) / 2);
+    top: 0;
+    background: #F2F2F2;
+    border-radius: 5px 5px 0px 0px;
+    z-index: 10;
+}
+.graph-wind-orange > .graph-wind-curr {
+    background: #FE9900;
+}
+.graph-wind-orange > .graph-wind-number {
+    color: #FFFFFF;
+}
+.graph-wind-orange > .graph-wind-arrow {
+    fill: #FE9900;
+}
+.graph-wind-number {
+    position: relative;
+    font-size: 14px;
+    line-height: 19px;
+    color: #919191;
+    margin-top: 7px;
+    z-index: 20;
+}
+.graph-wind-arrow {
     position: relative;
     fill: #02B86C;
     width: 13px;
     height: 13px;
     z-index: 20;
     margin: 0 auto;
+    margin-top: 18px;
 }
-.graph-item-wind-number {
-    color: #919191;
-    font-size: 14px;
-    line-height: 19px;
-    margin-top: 8px;
-    padding-bottom: 7px;
-    border-bottom: 1px solid #e8e8e8;
-}
+
+
 
 /*.select {
     display: block;
