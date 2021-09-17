@@ -7,6 +7,7 @@ body {
     background-color: #E5E5E5;
     text-align: left;
 }
+
 #btn-back-to-top {
     position: fixed;
     bottom: 20px;
@@ -14,6 +15,7 @@ body {
     display: none;
     z-index: 1000;
 }
+
 .btn-btt {
     background-color: #4D9335;
     width: 50px;
@@ -611,21 +613,21 @@ h3.forecast {
 }
 .forecast-link {
     display: block;
+    border-right: 1px solid #F2F2F2;
+}
+.forecast-link:last-child {
+    border-right: 1px solid transparent;
 }
 .forecast-link:hover {
     background-color: #F4F4F4;
     text-decoration: none;
 }
 .forecast-card-item {
-    width: 135px;
-    /*height: 106px;*/
+    width: 133px;
     flex: 0 0 auto;
-    border-right: 1px solid #F2F2F2;
     padding-bottom: 14px;
 }
-.forecast-card-item:last-child {
-    border-right: 1px solid transparent;
-}
+
 .forecast-card-item-tomorrow {
     background-color: #F4F4F4;    
 }
@@ -698,13 +700,14 @@ h3.forecast {
     width: 16px; 
     margin-top: -15px;
 }
-.wrapper {
+.forecast-card-wrapper {
     display: flex;
-    margin-bottom: 36px;
+    margin-bottom: 35px;
 }
+
 .forecast-box .arrow {
     align-self: center;
-
+    margin-left: 6px;
 }
 
 
@@ -1377,22 +1380,22 @@ h3.footer-header {
     position: relative;
     z-index: 20;
 }
-.days-rain-orange > .rain-back {
+.days-rain-orange > .days-rain-back {
     background: #FE9900;
 }
-.days-rain-orange > .rain-curr {
+.days-rain-orange > .days-rain-curr {
     display: none;
 }
-.days-rain-orange > .rain-number {
+.days-rain-orange > .days-rain-number {
     color: #FFFFFF;
 }
-.days-rain-red > .rain-back {
+.days-rain-red > .days-rain-back {
     background: #D74A4A;
 }
-.days-rain-red > .rain-curr {
+.days-rain-red > .days-rain-curr {
     display: none;
 }
-.days-rain-red > .rain-number {
+.days-rain-red > .days-rain-number {
     color: #FFFFFF;
 }
 .days-wind-orange {
@@ -1503,10 +1506,154 @@ h3.footer-header {
     width: 74px;
 }
 
+/***********************************/
+/*         график на outlook       */
+/***********************************/
 
-
-
-
+.forecast-graph-wrapper {
+    display: flex;
+    margin-bottom: 10px;
+}
+.forecast-graph {
+    display: flex;
+    position: relative;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    margin-left: -7px;
+    overflow-x: auto;
+    width: 800px;
+    justify-content: space-between;
+    -webkit-overflow-scrolling: touch;
+}
+.graph-link {
+    display: block;
+    flex-basis: 8.3%;
+}
+.graph-link:hover {
+    background-color: #F4F4F4;
+    text-decoration: none;
+}
+.forecast-graph-item {
+    display: flex;
+    padding: 0 10px;
+    text-align: center;
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.forecast-graph-item img {
+    margin: 0 auto;
+}
+.forecast-graph-item p {
+    text-align: center;
+}
+.graph-item-temp1 {
+    font-size: 14px;
+    line-height: 19px;    font-weight: bold;
+    color: #222222;
+    margin-top: 5px;
+}
+.graph-item-temp2 {
+    font-size: 14px;
+    line-height: 19px;
+    color: #919191;
+    margin-top: 4px;
+    margin-bottom: 5px;
+}
+.graph-item-bar {
+    background: #F2F2F2;
+    border-radius: 5px; 
+    width: 28px;
+    margin: 0 auto;
+}
+.graph-item-time {
+    font-size: 16px;
+    line-height: 22px;
+    color: #919191;
+    margin-top: 5px;
+    margin-bottom: 29px;
+}
+.graph-item-rain {
+    position: relative;
+    margin: 0 auto;
+    height: 50px;
+}
+.graph-rain-back {
+    position: absolute;
+    width: 28px;
+    height: 50px;
+    left: calc((100% - 28px) / 2);
+    top: calc((100% - 50px) / 2);
+    background: #F2F2F2; 
+    border-radius: 5px;
+}
+.graph-rain-curr {
+    position: absolute;
+    width: 28px;
+    left: calc((100% - 28px) / 2);
+    bottom: calc((100% - 50px) / 2);
+    background: #00B9FF;
+    border-radius: 0px 0px 5px 5px;
+    z-index: 10;
+}
+.graph-rain-number {
+    position: relative;
+    font-size: 14px;
+    line-height: 19px;
+    margin-top: 29px;
+    z-index: 20;
+}
+.graph-rain-orange > .graph-rain-back {
+    background: #FE9900;
+}
+.graph-rain-orange > .graph-rain-curr {
+    display: none;
+}
+.graph-rain-orange > .graph-rain-number {
+    color: #FFFFFF;
+}
+.graph-rain-red > .graph-rain-back {
+    background: #D74A4A;
+}
+.graph-rain-red > .graph-rain-curr {
+    display: none;
+}
+.graph-rain-red > .graph-rain-number {
+    color: #FFFFFF;
+}
+.graph-rain-brown > .graph-rain-back {
+    background: #800303;
+}
+.graph-rain-brown > .graph-rain-curr {
+    display: none;
+}
+.graph-rain-brown > .graph-rain-number {
+    color: #FFFFFF;
+}
+.graph-item-wind {
+    width: 28px;
+    height: 71px;
+    background: #F2F2F2;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+.graph-arrow {
+    position: relative;
+    fill: #02B86C;
+    width: 13px;
+    height: 13px;
+    z-index: 20;
+    margin: 0 auto;
+}
+.graph-item-wind-number {
+    color: #919191;
+    font-size: 14px;
+    line-height: 19px;
+    margin-top: 8px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #e8e8e8;
+}
 
 /*.select {
     display: block;

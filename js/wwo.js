@@ -1,3 +1,8 @@
+
+/////////////////////////////////////
+// To Top Button
+/////////////////////////////////////
+
 //Get the button
 let mybutton = document.getElementById("btn-back-to-top");
 
@@ -12,7 +17,7 @@ function scrollFunction() {
     document.documentElement.scrollTop > 20
   ) {
     mybutton.style.display = "block";
-  } else {
+    } else {
     mybutton.style.display = "none";
   }
 }
@@ -20,9 +25,17 @@ function scrollFunction() {
 mybutton.addEventListener("click", backToTop);
 
 function backToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+
+//////////////////////////////////////////
+
+
+
+///////////////////////////////////
+// Удаление городов из 2-го меню
+////////////////////////////////////
 
 $(document).ready(function(){
     $(".close-icon1").click(function(){
@@ -41,6 +54,14 @@ $(document).ready(function(){
       $(".weather-menu-item5").hide();
     });     
   });
+/////////////////////////////////////////
+
+
+
+////////////////////////////////////
+// Стилизация select/option
+/////////////////////////////////////
+
 
 
   $('.select').each(function() {
@@ -97,3 +118,5 @@ $(document).ready(function(){
         }
     });
 });
+/////////////////////////////////////////////////////////////
+
