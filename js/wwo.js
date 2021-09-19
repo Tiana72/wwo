@@ -183,11 +183,11 @@ Highcharts.chart('chart-container', {
   },
 
   title: {
-    text: '15 Day Temperature Chart',
+    text: '',
   },
 
   subtitle: {
-    text: 'Temperature chart displays the maximum and minimum temperature over next 15 days.'
+    text: ''
   },
 
   xAxis: {
@@ -231,6 +231,7 @@ Highcharts.chart('chart-container', {
   legend: {
     align: 'right',
     verticalAlign: 'top',
+    y: 25,
     borderWidth: 0
   },
 
@@ -283,11 +284,11 @@ Highcharts.chart('chart2-container', {
   },
 
   title: {
-    text: 'Hrodna, Belarus yearly monthly climate weather averages',
+    text: '',
   },
 
   subtitle: {
-    text: 'Max, min and average temperature'
+    text: ''
   },
 
   xAxis: {
@@ -331,6 +332,7 @@ Highcharts.chart('chart2-container', {
   legend: {
     align: 'right',
     verticalAlign: 'top',
+    y: 25,
     borderWidth: 0
   },
 
