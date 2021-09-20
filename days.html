@@ -10,281 +10,287 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
   <button type="button" class="btn btn-floating btn-lg btn-btt" id="btn-back-to-top">
     <img class="btt" src="img/arrow-top.svg" alt="">
   </button>
-
   <header>
-    <div class="container-fluid menu-container">
-      <div class="container w1170">
-        <nav class="navbar navbar-expand-sm menu">
-          <!-- Logo -->
-          <a class="navbar-brand logo" href="main.html"><img class="logo-header" src="img/logo.svg" alt=""></a>
-          <button class="navbar-toggler top-toggler" type="button" data-toggle="collapse" data-target="#top-menu" aria-controls="top-menu" aria-expanded="true" aria-label="Toggle navigation">
-            <img class="burger" src="img/burger.svg" alt="">
-          </button>   
-          <!-- Top Menu -->
-          <div class="navbar-collapse collapse" id="top-menu" style="">
-            <ul class="navbar-nav mr-auto top-menu">
-              <li class="nav-item top-menu-item">
-                <a class="nav-link top-menu-link" href="index.html">Weather</a>
-              </li>
-              <li class="nav-item top-menu-item">
-                <a class="nav-link top-menu-link" href="hourly.html">Hourly</a>
-              </li>
-              <li class="nav-item top-menu-item">
-                <a class="nav-link top-menu-link" href="history.html">History</a>
-              </li>
-              <li class="nav-item top-menu-item">
-                <a class="nav-link top-menu-link" href="widgets.html">Widgets</a>
-              </li>
-              <li class="nav-item top-menu-item">
-                <a class="nav-link top-menu-link" href="https://www.worldweatheronline.com/developer/" target="_blank">API</a>
-              </li>
-            </ul>
-            
+    <div class="row">
+      <div class="container-fluid menu-container">
+        <div class="container w1170">
+          <nav class="navbar navbar-expand-sm menu">
+            <!-- Logo -->
+            <a class="navbar-brand logo" href="main.html"><img class="logo-header" src="img/logo.svg" alt=""></a>
+            <button class="navbar-toggler top-toggler" type="button" data-toggle="collapse" data-target="#top-menu" aria-controls="top-menu" aria-expanded="true" aria-label="Toggle navigation">
+              <img class="burger" src="img/burger.svg" alt="">
+            </button>   
+            <!-- Top Menu -->
+            <div class="navbar-collapse collapse" id="top-menu" style="">
+              <ul class="navbar-nav mr-auto top-menu">
+                <li class="nav-item top-menu-item">
+                  <a class="nav-link top-menu-link" href="index.html">Weather</a>
+                </li>
+                <li class="nav-item top-menu-item">
+                  <a class="nav-link top-menu-link" href="hourly.html">Hourly</a>
+                </li>
+                <li class="nav-item top-menu-item">
+                  <a class="nav-link top-menu-link" href="history.html">History</a>
+                </li>
+                <li class="nav-item top-menu-item">
+                  <a class="nav-link top-menu-link" href="widgets.html">Widgets</a>
+                </li>
+                <li class="nav-item top-menu-item">
+                  <a class="nav-link top-menu-link" href="https://www.worldweatheronline.com/developer/" target="_blank">API</a>
+                </li>
+              </ul>
+              
 
-            <!-- Burger -->
-            <div class="btn-group burger-group" role="group" aria-label="Button group with nested dropdown">
-              <button id="btnGroupDrop1" type="button" class="btn top-toggler" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img class="burger" src="img/burger.svg" alt="">
-              </button>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupDrop1">
-                <a class="dropdown-item" href="index.html">Weather</a>
-                <a class="dropdown-item" href="hourly.html">Hourly</a>
-                <a class="dropdown-item" href="history.html">History</a>
-                <a class="dropdown-item" href="widgets.html">Widgets</a>
-                <a class="dropdown-item" href="https://www.worldweatheronline.com/developer/" target="_blank">API</a>
-              </div>
-            </div>              
-          </div>
-        </nav>
-            <!-- Settings modal -->
-            <button type="button" class="btn btn-settings" data-toggle="modal" data-target="#settings">
-              <img class="settings" src="img/sett-c-29.svg" alt="">
-            </button>
-            <div class="modal fade" id="settings" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-body settings-body">
-                    <div class="settings-body-item">
-                      <p class="sett">Temperature</p>
-                      <div class="btn-group" role="group" aria-label="sett-temp">
-                        <button type="button" class="btn btn-secondary sett-btn">°F</button>
-                        <button type="button" class="btn btn-primary sett-btn sett-btn-primary">°C</button>
-                      </div>
-                    </div>
-                    <div class="settings-body-item">
-                      <p class="sett">Wind</p>
-                      <div class="btn-group" role="group" aria-label="sett-temp">
-                        <button type="button" class="btn btn-primary sett-btn sett-btn-primary">M/S</button>
-                        <button type="button" class="btn btn-secondary sett-btn">MP/H</button>
-                        <button type="button" class="btn btn-secondary sett-btn">KP/H</button>
-                      </div>
-                    </div>
-                    <div class="settings-body-item">
-                      <p class="sett">Language</p>
-                      <select class="btn btn-secondary sett-btn">
-                        <option data-content='<span class=""></span> ENG'>ENG</option>
-                        <option data-content='<span class=""></span> RU'>RU</option>
-                        <option data-content='<span class=""></span> BY'>BY</option>
-                      </select>
-                    </div>
-                    <div class="settings-body-item">
-                      <p class="sett">Time(Hours)</p>
-                      <div class="btn-group" role="group" aria-label="sett-temp">
-                        <button type="button" class="btn btn-secondary sett-btn">12</button>
-                        <button type="button" class="btn btn-primary sett-btn sett-btn-primary">24</button>
-                      </div>
-                    </div>
-                    <div class="settings-body-item">
-                      <p class="sett">Precipitation</p>
-                      <div class="btn-group" role="group" aria-label="sett-temp">
-                        <button type="button" class="btn btn-secondary sett-btn">INCH</button>
-                        <button type="button" class="btn btn-primary sett-btn sett-btn-primary">MM</button>
-                      </div>
-                    </div>
-                  </div>
+              <!-- Burger -->
+              <div class="btn-group burger-group" role="group" aria-label="Button group with nested dropdown">
+                <button id="btnGroupDrop1" type="button" class="btn top-toggler" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img class="burger" src="img/burger.svg" alt="">
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupDrop1">
+                  <a class="dropdown-item" href="index.html">Weather</a>
+                  <a class="dropdown-item" href="hourly.html">Hourly</a>
+                  <a class="dropdown-item" href="history.html">History</a>
+                  <a class="dropdown-item" href="widgets.html">Widgets</a>
+                  <a class="dropdown-item" href="https://www.worldweatheronline.com/developer/" target="_blank">API</a>
                 </div>
-              </div>
+              </div>              
             </div>
-            <!-- Settings modal end -->
-        <form class="form-inline my-2 my-md-0 top-menu-search" action="http://google.com/search" target="_blank">
-          <input name="search" class="form-control search-input" type="search" autocomplete="on" placeholder="Search">
-        </form>
+          </nav>
+              <!-- Settings modal -->
+              <button type="button" class="btn btn-settings" data-toggle="modal" data-target="#settings">
+                <img class="settings" src="img/sett-c-29.svg" alt="">
+              </button>
+              <div class="modal fade" id="settings" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body settings-body">
+                      <div class="settings-body-item">
+                        <p class="sett">Temperature</p>
+                        <div class="btn-group" role="group" aria-label="sett-temp">
+                          <button type="button" class="btn btn-secondary sett-btn">°F</button>
+                          <button type="button" class="btn btn-primary sett-btn sett-btn-primary">°C</button>
+                        </div>
+                      </div>
+                      <div class="settings-body-item">
+                        <p class="sett">Wind</p>
+                        <div class="btn-group" role="group" aria-label="sett-temp">
+                          <button type="button" class="btn btn-primary sett-btn sett-btn-primary">M/S</button>
+                          <button type="button" class="btn btn-secondary sett-btn">MP/H</button>
+                          <button type="button" class="btn btn-secondary sett-btn">KP/H</button>
+                        </div>
+                      </div>
+                      <div class="settings-body-item">
+                        <p class="sett">Language</p>
+                        <select class="btn btn-secondary sett-btn">
+                          <option data-content='<span class=""></span> ENG'>ENG</option>
+                          <option data-content='<span class=""></span> RU'>RU</option>
+                          <option data-content='<span class=""></span> BY'>BY</option>
+                        </select>
+                      </div>
+                      <div class="settings-body-item">
+                        <p class="sett">Time(Hours)</p>
+                        <div class="btn-group" role="group" aria-label="sett-temp">
+                          <button type="button" class="btn btn-secondary sett-btn">12</button>
+                          <button type="button" class="btn btn-primary sett-btn sett-btn-primary">24</button>
+                        </div>
+                      </div>
+                      <div class="settings-body-item">
+                        <p class="sett">Precipitation</p>
+                        <div class="btn-group" role="group" aria-label="sett-temp">
+                          <button type="button" class="btn btn-secondary sett-btn">INCH</button>
+                          <button type="button" class="btn btn-primary sett-btn sett-btn-primary">MM</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Settings modal end -->
+          <form class="form-inline my-2 my-md-0 top-menu-search" action="http://google.com/search" target="_blank">
+            <input name="search" class="form-control search-input" type="search" autocomplete="on" placeholder="Search">
+          </form>
+        </div>
       </div>
     </div>
 
-    <div class="container-fluid weather-container">
-      <div class="container w1170">
-        <nav class="navbar navbar-expand weather-menu">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="weather-menu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="weather-menu">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item dropdown weather-menu-item1">
-                <a class="nav-link  weather-menu-link" href="#" id="city1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manchester, UK 18°C <span class="weather-icon"><img src="img/cloud.svg" alt=""></span><span href="#" class="close-icon1"><img src="img/close.svg" alt=""></span ></a>
-                <div class="dropdown-menu city-weather" aria-labelledby="city1">
-                  <div class=" city-weather-item" href="#">
-                    <div class="city-time">Morning</div>
-                    <div class="city-temperature">12°C</div>
-                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+    <div class="row">
+      <div class="container-fluid weather-container">
+        <div class="container w1170">
+          <nav class="navbar navbar-expand weather-menu">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="weather-menu" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="weather-menu">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown weather-menu-item1">
+                  <a class="nav-link  weather-menu-link" href="#" id="city1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manchester, UK 18°C <span class="weather-icon"><img src="img/cloud.svg" alt=""></span><span href="#" class="close-icon1"><img src="img/close.svg" alt=""></span ></a>
+                  <div class="dropdown-menu city-weather" aria-labelledby="city1">
+                    <div class=" city-weather-item" href="#">
+                      <div class="city-time">Morning</div>
+                      <div class="city-temperature">12°C</div>
+                      <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                    </div>
+                    <div class="dropdown-divider weather-divider"></div>
+                    <div class=" city-weather-item" href="#">
+                      <div class="city-time">Day</div>
+                      <div class="city-temperature">12°C</div>
+                      <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                    </div>
+                    <div class="dropdown-divider weather-divider"></div>
+                    <div class=" city-weather-item" href="#">
+                      <div class="city-time">Evening</div>
+                      <div class="city-temperature">12°C</div>
+                      <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                    </div>
+                    <div class="dropdown-divider weather-divider"></div>
+                    <div class=" city-weather-item" href="#">
+                      <div class="city-time">Night</div>
+                      <div class="city-temperature">12°C</div>
+                      <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                    </div>
+                    <div class="city-weather-more">
+                      <a href=""><img src="img/moredetails.svg" alt=""></a>
+                    </div>
                   </div>
-                  <div class="dropdown-divider weather-divider"></div>
-                  <div class=" city-weather-item" href="#">
-                    <div class="city-time">Day</div>
-                    <div class="city-temperature">12°C</div>
-                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                </li>
+                <li class="nav-item dropdown weather-menu-item2">
+                  <a class="nav-link  weather-menu-link" href="#" id="city2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">London, UK 20°C <span class="weather-icon"><img src="img/sun-cloud.svg" alt=""></span><span href="#" class="close-icon2"><img src="img/close.svg" alt=""></span ></a>
+                  <div class="dropdown-menu city-weather" aria-labelledby="city2">
+                    <div class=" city-weather-item" href="#">
+                      <div class="city-time">Morning</div>
+                      <div class="city-temperature">12°C</div>
+                      <div class="city-weather-icon"><img src="img/sun-cloud.svg" alt=""></div>
+                    </div>
+                    <div class="dropdown-divider weather-divider"></div>
+                    <div class=" city-weather-item" href="#">
+                      <div class="city-time">Day</div>
+                      <div class="city-temperature">12°C</div>
+                      <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                    </div>
+                    <div class="dropdown-divider weather-divider"></div>
+                    <div class=" city-weather-item" href="#">
+                      <div class="city-time">Evening</div>
+                      <div class="city-temperature">12°C</div>
+                      <div class="city-weather-icon"><img src="img/sun-cloud.svg" alt=""></div>
+                    </div>
+                    <div class="dropdown-divider weather-divider"></div>
+                    <div class=" city-weather-item" href="#">
+                      <div class="city-time">Night</div>
+                      <div class="city-temperature">12°C</div>
+                      <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                    </div>
+                    <div class="city-weather-more">
+                      <a href=""><img src="img/moredetails.svg" alt=""></a>
+                    </div>
                   </div>
-                  <div class="dropdown-divider weather-divider"></div>
-                  <div class=" city-weather-item" href="#">
-                    <div class="city-time">Evening</div>
-                    <div class="city-temperature">12°C</div>
-                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                </li>
+                <li class="nav-item dropdown weather-menu-item3">
+                  <a class="nav-link  weather-menu-link" href="#" id="city3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edinburg, UK 15°C <span class="weather-icon"><img src="img/cloud.svg" alt=""></span><span href="#" class="close-icon3"><img src="img/close.svg" alt=""></span ></a>
+                  <div class="dropdown-menu city-weather" aria-labelledby="city3">
+                    <div class=" city-weather-item" href="#">
+                      <div class="city-time">Morning</div>
+                      <div class="city-temperature">12°C</div>
+                      <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                    </div>
+                    <div class="dropdown-divider weather-divider"></div>
+                    <div class=" city-weather-item" href="#">
+                      <div class="city-time">Day</div>
+                      <div class="city-temperature">12°C</div>
+                      <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                    </div>
+                    <div class="dropdown-divider weather-divider"></div>
+                    <div class=" city-weather-item" href="#">
+                      <div class="city-time">Evening</div>
+                      <div class="city-temperature">12°C</div>
+                      <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                    </div>
+                    <div class="dropdown-divider weather-divider"></div>
+                    <div class=" city-weather-item" href="#">
+                      <div class="city-time">Night</div>
+                      <div class="city-temperature">12°C</div>
+                      <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                    </div>
+                    <div class="city-weather-more">
+                      <a href=""><img src="img/moredetails.svg" alt=""></a>
+                    </div>
                   </div>
-                  <div class="dropdown-divider weather-divider"></div>
-                  <div class=" city-weather-item" href="#">
-                    <div class="city-time">Night</div>
-                    <div class="city-temperature">12°C</div>
-                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                </li>
+                <li class="nav-item dropdown weather-menu-item4">
+                  <a class="nav-link  weather-menu-link" href="#" id="city4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Glasgou, UK 11°C <span class="weather-icon"><img src="img/sun-cloud.svg" alt=""></span><span href="#" class="close-icon4"><img src="img/close.svg" alt=""></span ></a>
+                  <div class="dropdown-menu city-weather" aria-labelledby="city4">
+                    <div class=" city-weather-item" href="#">
+                      <div class="city-time">Morning</div>
+                      <div class="city-temperature">12°C</div>
+                      <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                    </div>
+                    <div class="dropdown-divider weather-divider"></div>
+                    <div class=" city-weather-item" href="#">
+                      <div class="city-time">Day</div>
+                      <div class="city-temperature">12°C</div>
+                      <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                    </div>
+                    <div class="dropdown-divider weather-divider"></div>
+                    <div class=" city-weather-item" href="#">
+                      <div class="city-time">Evening</div>
+                      <div class="city-temperature">12°C</div>
+                      <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                    </div>
+                    <div class="dropdown-divider weather-divider"></div>
+                    <div class=" city-weather-item" href="#">
+                      <div class="city-time">Night</div>
+                      <div class="city-temperature">12°C</div>
+                      <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                    </div>
+                    <div class="city-weather-more">
+                      <a href=""><img src="img/moredetails.svg" alt=""></a>
+                    </div>
                   </div>
-                  <div class="city-weather-more">
-                    <a href=""><img src="img/moredetails.svg" alt=""></a>
+                </li>
+                <li class="nav-item dropdown weather-menu-item5">
+                  <a class="nav-link  weather-menu-link" href="#" id="city5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">London, UK 20°C <span class="weather-icon"><img src="img/cloud.svg" alt=""></span><span href="#" class="close-icon5"><img src="img/close.svg" alt=""></span ></a>
+                  <div class="dropdown-menu city-weather" aria-labelledby="city5">
+                    <div class=" city-weather-item" href="#">
+                      <div class="city-time">Morning</div>
+                      <div class="city-temperature">12°C</div>
+                      <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                    </div>
+                    <div class="dropdown-divider weather-divider"></div>
+                    <div class=" city-weather-item" href="#">
+                      <div class="city-time">Day</div>
+                      <div class="city-temperature">12°C</div>
+                      <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                    </div>
+                    <div class="dropdown-divider weather-divider"></div>
+                    <div class=" city-weather-item" href="#">
+                      <div class="city-time">Evening</div>
+                      <div class="city-temperature">12°C</div>
+                      <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                    </div>
+                    <div class="dropdown-divider weather-divider"></div>
+                    <div class=" city-weather-item" href="#">
+                      <div class="city-time">Night</div>
+                      <div class="city-temperature">12°C</div>
+                      <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
+                    </div>
+                    <div class="city-weather-more">
+                      <a href=""><img src="img/moredetails.svg" alt=""></a>
+                    </div>
                   </div>
-                </div>
-              </li>
-              <li class="nav-item dropdown weather-menu-item2">
-                <a class="nav-link  weather-menu-link" href="#" id="city2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">London, UK 20°C <span class="weather-icon"><img src="img/sun-cloud.svg" alt=""></span><span href="#" class="close-icon2"><img src="img/close.svg" alt=""></span ></a>
-                <div class="dropdown-menu city-weather" aria-labelledby="city2">
-                  <div class=" city-weather-item" href="#">
-                    <div class="city-time">Morning</div>
-                    <div class="city-temperature">12°C</div>
-                    <div class="city-weather-icon"><img src="img/sun-cloud.svg" alt=""></div>
-                  </div>
-                  <div class="dropdown-divider weather-divider"></div>
-                  <div class=" city-weather-item" href="#">
-                    <div class="city-time">Day</div>
-                    <div class="city-temperature">12°C</div>
-                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
-                  </div>
-                  <div class="dropdown-divider weather-divider"></div>
-                  <div class=" city-weather-item" href="#">
-                    <div class="city-time">Evening</div>
-                    <div class="city-temperature">12°C</div>
-                    <div class="city-weather-icon"><img src="img/sun-cloud.svg" alt=""></div>
-                  </div>
-                  <div class="dropdown-divider weather-divider"></div>
-                  <div class=" city-weather-item" href="#">
-                    <div class="city-time">Night</div>
-                    <div class="city-temperature">12°C</div>
-                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
-                  </div>
-                  <div class="city-weather-more">
-                    <a href=""><img src="img/moredetails.svg" alt=""></a>
-                  </div>
-                </div>
-              </li>
-              <li class="nav-item dropdown weather-menu-item3">
-                <a class="nav-link  weather-menu-link" href="#" id="city3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edinburg, UK 15°C <span class="weather-icon"><img src="img/cloud.svg" alt=""></span><span href="#" class="close-icon3"><img src="img/close.svg" alt=""></span ></a>
-                <div class="dropdown-menu city-weather" aria-labelledby="city3">
-                  <div class=" city-weather-item" href="#">
-                    <div class="city-time">Morning</div>
-                    <div class="city-temperature">12°C</div>
-                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
-                  </div>
-                  <div class="dropdown-divider weather-divider"></div>
-                  <div class=" city-weather-item" href="#">
-                    <div class="city-time">Day</div>
-                    <div class="city-temperature">12°C</div>
-                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
-                  </div>
-                  <div class="dropdown-divider weather-divider"></div>
-                  <div class=" city-weather-item" href="#">
-                    <div class="city-time">Evening</div>
-                    <div class="city-temperature">12°C</div>
-                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
-                  </div>
-                  <div class="dropdown-divider weather-divider"></div>
-                  <div class=" city-weather-item" href="#">
-                    <div class="city-time">Night</div>
-                    <div class="city-temperature">12°C</div>
-                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
-                  </div>
-                  <div class="city-weather-more">
-                    <a href=""><img src="img/moredetails.svg" alt=""></a>
-                  </div>
-                </div>
-              </li>
-              <li class="nav-item dropdown weather-menu-item4">
-                <a class="nav-link  weather-menu-link" href="#" id="city4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Glasgou, UK 11°C <span class="weather-icon"><img src="img/sun-cloud.svg" alt=""></span><span href="#" class="close-icon4"><img src="img/close.svg" alt=""></span ></a>
-                <div class="dropdown-menu city-weather" aria-labelledby="city4">
-                  <div class=" city-weather-item" href="#">
-                    <div class="city-time">Morning</div>
-                    <div class="city-temperature">12°C</div>
-                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
-                  </div>
-                  <div class="dropdown-divider weather-divider"></div>
-                  <div class=" city-weather-item" href="#">
-                    <div class="city-time">Day</div>
-                    <div class="city-temperature">12°C</div>
-                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
-                  </div>
-                  <div class="dropdown-divider weather-divider"></div>
-                  <div class=" city-weather-item" href="#">
-                    <div class="city-time">Evening</div>
-                    <div class="city-temperature">12°C</div>
-                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
-                  </div>
-                  <div class="dropdown-divider weather-divider"></div>
-                  <div class=" city-weather-item" href="#">
-                    <div class="city-time">Night</div>
-                    <div class="city-temperature">12°C</div>
-                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
-                  </div>
-                  <div class="city-weather-more">
-                    <a href=""><img src="img/moredetails.svg" alt=""></a>
-                  </div>
-                </div>
-              </li>
-              <li class="nav-item dropdown weather-menu-item5">
-                <a class="nav-link  weather-menu-link" href="#" id="city5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">London, UK 20°C <span class="weather-icon"><img src="img/cloud.svg" alt=""></span><span href="#" class="close-icon5"><img src="img/close.svg" alt=""></span ></a>
-                <div class="dropdown-menu city-weather" aria-labelledby="city5">
-                  <div class=" city-weather-item" href="#">
-                    <div class="city-time">Morning</div>
-                    <div class="city-temperature">12°C</div>
-                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
-                  </div>
-                  <div class="dropdown-divider weather-divider"></div>
-                  <div class=" city-weather-item" href="#">
-                    <div class="city-time">Day</div>
-                    <div class="city-temperature">12°C</div>
-                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
-                  </div>
-                  <div class="dropdown-divider weather-divider"></div>
-                  <div class=" city-weather-item" href="#">
-                    <div class="city-time">Evening</div>
-                    <div class="city-temperature">12°C</div>
-                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
-                  </div>
-                  <div class="dropdown-divider weather-divider"></div>
-                  <div class=" city-weather-item" href="#">
-                    <div class="city-time">Night</div>
-                    <div class="city-temperature">12°C</div>
-                    <div class="city-weather-icon"><img src="img/cloud.svg" alt=""></div>
-                  </div>
-                  <div class="city-weather-more">
-                    <a href=""><img src="img/moredetails.svg" alt=""></a>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </nav>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
       </div>
     </div>
+
+
 
     <div class="container w1170">
       <div class="row">
@@ -296,7 +302,7 @@
       </div>
     </div>
 
-    <div class="container w1170">
+    <div class="container w1170 breadcrumbs-box">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb breads">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -321,6 +327,7 @@
               <a href="days.html" class="forecast-menu-item forecast-menu-item-active">Days</a>
               <a href="" class="forecast-menu-item ">Averages</a>
               <a href="" class="forecast-menu-item forecast-menu-item-alert">Weather alerts!</a>
+              <a href="" class="forecast-menu-item forecast-menu-item-alert-aside">Weather alerts!</a>
               <a href="https://map.worldweatheronline.com/" target="_blank" class="forecast-menu-item">Weather maps <img src="img/maps-logo.png" width="15" height="17" alt=""></a>
             </div>
 
