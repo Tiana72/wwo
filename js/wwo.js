@@ -63,7 +63,7 @@ $(document).ready(function(){
 /////////////////////////////////////
 
 
-
+/*
   $('.select').each(function() {
     const _this = $(this),
         selectOption = _this.find('option'),
@@ -117,7 +117,7 @@ $(document).ready(function(){
             selectList.slideUp(duration);
         }
     });
-});
+});*/
 /////////////////////////////////////////////////////////////
 
 
@@ -256,8 +256,6 @@ Highcharts.chart('chart-container', {
     marker: {
       radius: 4
     }
-  }, {
-    name: 'New users'
   }]
 });
 

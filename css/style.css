@@ -31,8 +31,8 @@ body {
 p {
     margin-bottom: 0;
 }
-section {
-    
+.row {
+    margin: 0;
 }
 .w1170 {
     position: relative;
@@ -333,6 +333,7 @@ nav.navbar .dropdown:hover > .city-weather {
 .weather-now-uv {
     padding: 23px 20px 24px;
     margin-bottom: 10px;
+    flex-basis: 100%;
 }
 .progress {
     height: 16px;
@@ -363,6 +364,7 @@ nav.navbar .dropdown:hover > .city-weather {
 .weather-now-holiday {
     padding: 23px 20px 18px;
     text-align: center;
+    flex-basis: 100%;
 }
 .holiday-img {
     width: 242px;
@@ -987,8 +989,6 @@ h3.footer-header {
 }
 .hourly-details-wrapper {
     margin-top: 17px;
-    
-    flex-direction: row;
     margin-right: -10px;
     margin-left: -10px;
 }
@@ -998,7 +998,6 @@ h3.footer-header {
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-
 }
 .hourly-details-table {
     width: 100%;
@@ -1204,6 +1203,7 @@ h3.footer-header {
 .days-box {
     padding-top: 19px;
     padding-right: 10px;
+    padding-left: 10px;
     padding-bottom: 9px;
     
 }
@@ -1216,7 +1216,7 @@ h3.footer-header {
 }
 .weather-days-hr {
     margin-right: -10px;
-    margin-left: -21px;
+    margin-left: -10px;
     margin-top: 0px;
     margin-bottom: 0px;
     border: 0;
@@ -1232,7 +1232,22 @@ h3.footer-header {
     height: 77px;
     align-items: center;
     background-color: transparent;
-    
+}
+.days-details-row-item:first-child {
+    text-align: left;
+    padding-left: 10px; 
+    width: 165px;
+}
+.days-details-row-item:nth-child(2) {
+    width: 55px;
+}
+.days-details-row-item:nth-child(3) {
+    padding-left: 8px; 
+    text-align: left; 
+    width: 148px;
+}
+.days-details-row-item:last-child {
+    width: 85px;
 }
 .days-details-row-header {
     background-color: #FFFFFF;
@@ -1245,6 +1260,17 @@ h3.footer-header {
     color: #919191;
     text-align: center;
 }
+.days-details-row-header-item:nth-child(1) {
+    text-align: left;
+    padding-left: 29px;
+}
+.days-details-row-header-item:nth-child(3) {
+    text-align: left;
+    padding-left: 16px;
+}
+.days-details-row-header-item:last-child {
+    padding-right: 22px;
+}
 .days-details-row-item {
     position: relative;
     font-size: 14px;
@@ -1256,9 +1282,11 @@ h3.footer-header {
 .days-details {
     margin-top: 21px;
     display: flex;
+    position: relative;
+    overflow-x: auto;
     flex-direction: row;
     margin-right: -10px;
-    margin-left: -21px;
+    margin-left: -10px;
 }
 .days-details-table {
     width: 100%;
@@ -1406,7 +1434,7 @@ h3.footer-header {
 }
 .weather-table-hr {
     margin-right: -10px;
-    margin-left: -21px;
+    margin-left: -10px;
     margin-top: 9px;
     margin-bottom: 0px;
     border: 0;

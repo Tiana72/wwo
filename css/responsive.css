@@ -1,13 +1,17 @@
 @media (max-width: 768px) {
+    .menu {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
     .weather-container {
         display: none;
     }
     .btn-settings {
-        right: 50px;
+        right: 35px;
     }
     .top-menu-search {
         top: 68px;
-        right: 15px;
+        right: 0;
         z-index: 20;
     }
     .search-input {
@@ -87,8 +91,14 @@
     .history-date-block {
         margin-top: 60px;
     }
-
-
+    .days-wind-orange, .days-wind-red, .days-wind-brown {
+        width: 195px;
+        left: 0;
+    }
+    .days-collapse {
+        font-size: 24px;
+        line-height: 33px;
+    }
 
     .footer-main-content-1 {
         flex-basis: 35%;
@@ -111,7 +121,7 @@
     }
     .top-menu-search {
         top: 53px;
-        right: 15px;
+        right: 0;
         z-index: 20;
     }
     .search-input {
@@ -273,16 +283,13 @@
     .hourly-info-item-cont {
         flex-basis: 50%;
     }
-    .hourly-details-wrapper {
-       
-    }
+
     .hourly-details {
         position: relative;
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
-        width: 738px;
     }
     .history-date-block {
         margin-top: 20px;
@@ -291,6 +298,61 @@
     .history-date-item {
         margin-top: 10px;
     }
+    .days-header {
+        font-size: 20px;
+        line-height: 27px;
+        color: #222222;
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    .days-details-row-header-item:nth-child(1) {
+        padding-left: 10px;
+    }
+    .days-details-row-item:first-child {
+        padding-left: 10px;
+        min-width: 95px;
+    }
+    .days-comment {
+        margin-left: 0px;
+    }
+    .days-temp {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+       margin-left: 0px;
+    }
+    .days-collapse {
+        font-size: 20px;
+        line-height: 27px;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .days-collapse-date {
+        flex-basis: 49%;
+        order: 1;
+    }
+    .days-collapse-temp {
+        flex-basis: 49%;
+        order: 3;
+    }
+    .days-collapse-forecast {
+        flex-basis: 40%;
+        order: 4;
+        text-align: left;
+    }
+    .days-collapse-img {
+        flex-basis: 40%;
+        order: 2;
+    }
+    .days-inform {
+        flex-wrap: wrap;
+    }
+    .days-magnet {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
 
     .footer-copyright {
         flex-direction: column;
@@ -332,4 +394,12 @@
     .footer-aside-content-2 {
         flex-basis: 50%;
     }
+}
+
+
+@media (max-width: 320px) {
+    ul.top-menu {
+        margin-top: 50px;
+    }
+    
 }
