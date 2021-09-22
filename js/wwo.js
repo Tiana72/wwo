@@ -31,7 +31,19 @@ function backToTop() {
 
 //////////////////////////////////////////
 
+/////////////////////////////////////////////
+//          Slick Slider                   //
+/////////////////////////////////////////////
 
+$(document).ready(function(){
+  $('.forecast-card').slick({
+    infinite: false,
+    slidesToShow: 6,
+    slidesToScroll: 4,
+    prevArrow: "<img src='../img/green-arrow.svg' class='prev' alt='1'>",
+    nextArrow: "<img src='../img/green-arrow.svg' class='next' alt='2'>",
+  });
+});
 
 ///////////////////////////////////
 // Удаление городов из 2-го меню

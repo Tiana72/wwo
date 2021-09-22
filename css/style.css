@@ -629,6 +629,7 @@ h3.forecast {
     padding-top: 7px;
     flex-wrap: nowrap;
     overflow-x: auto;
+    max-width: 800px;
     -webkit-overflow-scrolling: touch;
 }
 .forecast-link {
@@ -1805,3 +1806,11 @@ h3.graph-title {
          -o-transform: rotate(180deg);
             transform: rotate(180deg);
 }*/
+
+
+.slick-track {
+    margin-top: 5px;
+}
+.slick-prev {
+    display: none;
+}
