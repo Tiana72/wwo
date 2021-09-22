@@ -42,6 +42,69 @@ $(document).ready(function(){
     slidesToScroll: 4,
     prevArrow: "<img src='../img/green-arrow.svg' class='prev' alt='1'>",
     nextArrow: "<img src='../img/green-arrow.svg' class='next' alt='2'>",
+    responsive: [
+      {
+	      breakpoint: 769,
+	      settings: {
+	        slidesToShow: 5,
+          slidesToScroll: 5,
+	      }
+	    },
+	    {
+	      breakpoint: 577,
+	      settings: {
+	        slidesToShow: 4,
+          slidesToScroll: 4,
+	      }
+	    },
+      {
+	      breakpoint: 321,
+	      settings: {
+	        slidesToShow: 2,
+          slidesToScroll: 2,
+	      }
+	    }
+    ]
+  });
+});
+
+$(document).ready(function(){
+  $('.forecast-graph').slick({
+    infinite: false,
+    slidesToShow: 12,
+    slidesToScroll: 12,
+    prevArrow: "<img src='../img/green-arrow.svg' class='prev' alt='1'>",
+    nextArrow: "<img src='../img/green-arrow.svg' class='next' alt='2'>",
+
+    responsive: [
+      {
+	      breakpoint: 769,
+	      settings: {
+	        slidesToShow: 12,
+          slidesToScroll: 12,
+          arrows: false,
+
+	      }
+	    },
+	    {
+	      breakpoint: 577,
+	      settings: {
+	        slidesToShow: 10,
+          slidesToScroll: 10,
+          arrows: false,
+
+	      }
+	    },
+      {
+	      breakpoint: 321,
+	      settings: {
+	        slidesToShow: 6,
+          slidesToScroll: 6,
+          arrows: false,
+
+	      }
+	    }
+    ]
   });
 });
 
