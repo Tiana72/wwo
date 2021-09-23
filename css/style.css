@@ -625,6 +625,7 @@ h3.forecast {
 }
 .forecast-card {
     display: flex;
+    flex-basis: 100%;
     position: relative;
     padding-top: 7px;
     flex-wrap: nowrap;
@@ -724,6 +725,7 @@ h3.forecast {
 .forecast-card-wrapper {
     display: flex;
     margin-bottom: 35px;
+    position: relative;
 }
 
 .forecast-box .arrow {
@@ -778,7 +780,7 @@ h5.holiday-header {
     padding: 7px 15px;
     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.05));
 }
-.common:hover {
+.common-button:hover {
     text-decoration: none;
     color: #FFFFFF;
 }
@@ -1441,6 +1443,9 @@ h3.footer-header {
 .days-rise img, .days-set img {
     margin-bottom: 17px;
 }
+.days-collapse-link:hover {
+    text-decoration: none;
+}
 .days-collapse {
     display: flex;
     justify-content: space-between;
@@ -1816,8 +1821,10 @@ h3.graph-title {
 }
 .slick-arrow {
     display: block;
-    margin: auto;
-    padding-left: 7px;
+    position: absolute;
+    top: 47%;
+    bottom: 0;
+    right: 0;
     z-index: 60;
     outline: none !important;
     cursor: pointer;
@@ -1829,8 +1836,12 @@ h3.graph-title {
 .prev {
     transform: rotate(180deg);
 }
-
-
+.forecast-graph .slick-list {
+    margin-right: 33px;
+}
+.forecast-card .slick-list {
+    margin-right: 33px;
+}
 
 .forecast-graph .slick-track {
     display: flex;
@@ -1841,4 +1852,81 @@ h3.graph-title {
     width: 830px;
     justify-content: space-between;
     -webkit-overflow-scrolling: touch;
+}
+
+
+/*******************************************/
+/*                       Main              */
+/*******************************************/
+
+h3.three-day {
+    font-size: 28px;
+    line-height: 38px;
+    color: #222222;
+}
+.three-days-menu {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.three-days-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.day-card {
+    background: #F8F8F8;
+    border-radius: 5px;
+    height: 220px;
+}
+.today {
+    width: 470px;
+}
+.next-day {
+    width: 320px;
+}
+.world-weather-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 41px;
+}
+.world-weather-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.world-weather-cards-item {
+    background: #F8F8F8;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 100px;
+    width: 225px;
+}
+.world-weather-map {
+    text-align: center;
+   
+}
+.world-weather-map-item {
+    width: 392px;
+    height: 220px;
+    background: #F8F8F8;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    background-image: url(../img/map.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+.play-map {
+    position: absolute;
+    background-image: url('../img/play.svg');
+    height: 44px;
+    width: 44px; 
+    left: calc((100% - 44px) / 2);
+    top: calc((100% - 44px) / 2);
+
 }

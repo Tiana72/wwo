@@ -40,14 +40,15 @@ $(document).ready(function(){
     infinite: false,
     slidesToShow: 6,
     slidesToScroll: 4,
-    prevArrow: "<img src='../img/green-arrow.svg' class='prev' alt='1'>",
-    nextArrow: "<img src='../img/green-arrow.svg' class='next' alt='2'>",
+    prevArrow: "<img src='../img/green-arrow-round.svg' class='prev' alt='1'>",
+    nextArrow: "<img src='../img/green-arrow-round.svg' class='next' alt='2'>",
     responsive: [
       {
 	      breakpoint: 769,
 	      settings: {
 	        slidesToShow: 5,
           slidesToScroll: 5,
+          
 	      }
 	    },
 	    {
@@ -55,6 +56,7 @@ $(document).ready(function(){
 	      settings: {
 	        slidesToShow: 4,
           slidesToScroll: 4,
+          arrows: false,
 	      }
 	    },
       {
@@ -62,6 +64,7 @@ $(document).ready(function(){
 	      settings: {
 	        slidesToShow: 2,
           slidesToScroll: 2,
+          arrows: false,
 	      }
 	    }
     ]
@@ -73,8 +76,8 @@ $(document).ready(function(){
     infinite: false,
     slidesToShow: 12,
     slidesToScroll: 12,
-    prevArrow: "<img src='../img/green-arrow.svg' class='prev' alt='1'>",
-    nextArrow: "<img src='../img/green-arrow.svg' class='next' alt='2'>",
+    prevArrow: "<img src='../img/green-arrow-round.svg' class='prev' alt='1'>",
+    nextArrow: "<img src='../img/green-arrow-round.svg' class='next' alt='2'>",
 
     responsive: [
       {
@@ -82,7 +85,7 @@ $(document).ready(function(){
 	      settings: {
 	        slidesToShow: 12,
           slidesToScroll: 12,
-          arrows: false,
+          
 
 	      }
 	    },

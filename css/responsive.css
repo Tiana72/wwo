@@ -352,6 +352,12 @@
         margin-top: 10px;
         margin-bottom: 10px;
     }
+    .forecast-card .slick-list {
+        margin-right: 0px;
+    }
+    .forecast-graph .slick-list {
+        margin-right: 0px;
+    }
 
 
     .footer-copyright {
