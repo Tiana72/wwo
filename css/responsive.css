@@ -358,6 +358,9 @@
     .forecast-graph .slick-list {
         margin-right: 0px;
     }
+    .weather-hour-table .slick-list {
+        margin-right: 0px;
+    }
 
 
     .footer-copyright {

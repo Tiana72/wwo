@@ -40,8 +40,8 @@ $(document).ready(function(){
     infinite: false,
     slidesToShow: 6,
     slidesToScroll: 4,
-    prevArrow: "<img src='../img/green-arrow-round.svg' class='prev' alt='1'>",
-    nextArrow: "<img src='../img/green-arrow-round.svg' class='next' alt='2'>",
+    prevArrow: "<img src='../img/green-arrow.svg' class='prev' alt='1'>",
+    nextArrow: "<img src='../img/green-arrow.svg' class='next' alt='2'>",
     responsive: [
       {
 	      breakpoint: 769,
@@ -76,8 +76,8 @@ $(document).ready(function(){
     infinite: false,
     slidesToShow: 12,
     slidesToScroll: 12,
-    prevArrow: "<img src='../img/green-arrow-round.svg' class='prev' alt='1'>",
-    nextArrow: "<img src='../img/green-arrow-round.svg' class='next' alt='2'>",
+    prevArrow: "<img src='../img/green-arrow.svg' class='prev' alt='1'>",
+    nextArrow: "<img src='../img/green-arrow.svg' class='next' alt='2'>",
 
     responsive: [
       {
@@ -111,6 +111,43 @@ $(document).ready(function(){
   });
 });
 
+$(document).ready(function(){
+  $('.weather-hour-table').slick({
+    infinite: false,
+    slidesToShow: 8,
+    slidesToScroll: 8,
+    prevArrow: "<img src='../img/green-back.svg' class='prev' alt='1'>",
+    nextArrow: "<img src='../img/moredetails.svg' class='next' alt='2'>",
+    responsive: [
+      {
+	      breakpoint: 769,
+	      settings: {
+	        slidesToShow: 8,
+          slidesToScroll: 8,
+          
+	      }
+	    },
+	    {
+	      breakpoint: 577,
+	      settings: {
+	        slidesToShow: 6,
+          slidesToScroll: 6,
+          arrows: false,
+	      }
+	    },
+      {
+	      breakpoint: 321,
+	      settings: {
+	        slidesToShow: 4,
+          slidesToScroll: 4,
+          arrows: false,
+	      }
+	    }
+    ]
+  });
+});
+
+
 ///////////////////////////////////
 // Удаление городов из 2-го меню
 ////////////////////////////////////
@@ -130,7 +167,12 @@ $(document).ready(function(){
     });
     $(".close-icon5").click(function(){
       $(".weather-menu-item5").hide();
-    });     
+    });   
+    
+    $(".forecast-link").click(function() {
+      $(".forecast-link").siblings(".current").removeClass("current"); 
+      $(this).addClass("current");
+    });
   });
 /////////////////////////////////////////
 
