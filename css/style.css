@@ -1186,7 +1186,7 @@ h3.footer-header {
 }
 .history-date-control:hover {
     border-bottom: 1px solid #909090;
-    background: #f8f8f8;
+    background: #F8F8F8;
 
 }
 .history-date-option {
@@ -1443,6 +1443,9 @@ h3.footer-header {
 
 .days-rise img, .days-set img {
     margin-bottom: 17px;
+}
+.days-box-link:hover {
+    background-color: #f2f2f2;
 }
 .days-collapse-link:hover {
     text-decoration: none;
@@ -1934,4 +1937,60 @@ h3.three-day {
     left: calc((100% - 44px) / 2);
     top: calc((100% - 44px) / 2);
 
+}
+
+.top-dest {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 25px;
+    color: #919191;
+    height: 250px;
+    margin: 0;
+    padding: 0;
+    margin-left: 21px;
+}
+.box-api .common-button {
+    margin-right: 20px;
+}
+.api-wrapper {
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: row;
+    margin-bottom: 3px;
+}
+.api-block {
+    flex-basis: 33%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.api-text {
+    font-size: 14px;
+    line-height: 19px;
+    color: #000000;
+    max-width: 150px;
+}
+.api-img {
+    margin-right: 12px;
+}
+.box-text a {
+    color: #0645AD;
+}
+.holiday-item {
+    width: 270px;
+    height: 160px;
+    background: #F8F8F8;
+    border-radius: 5px;
+    padding: 14px 10px 10px 16px;
+}
+.holiday-item-feels {
+    display: flex;
+    justify-content: space-between;
+}
+.holiday-item-feels p {
+    font-size: 14px;
+    line-height: 19px;
+    color: #919191;
 }
