@@ -366,6 +366,7 @@ nav.navbar .dropdown:hover > .city-weather {
     padding: 23px 20px 18px;
     text-align: center;
     flex-basis: 100%;
+    margin-bottom: 10px;
 }
 .holiday-img {
     width: 242px;

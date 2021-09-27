@@ -1,3 +1,20 @@
+@media (max-width: 1200px) {
+    .main {
+        padding-right: 0px!important;
+    }
+    .aside {
+        flex: 0 0 100%;
+        max-width: 100%;
+        justify-content: space-between;
+    }
+    .aside-sticky {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 15px;
+    }
+}
+
 @media (max-width: 768px) {
     .menu {
         margin-left: -15px;
@@ -35,6 +52,9 @@
     .ws-details-item {
         margin-bottom: 10px;
     }
+    .main {
+        padding-right: 0px!important;
+    }
     .aside {
         flex: 0 0 100%;
         max-width: 100%;
@@ -44,9 +64,7 @@
         flex-basis: 49%;
         margin-bottom: 15px;
     }
-    .main {
-        padding-right: 0px!important;
-    }
+
     .forecast-menu {
         flex-wrap: wrap;
 
