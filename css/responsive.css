@@ -1,4 +1,4 @@
-/* @media (max-width: 1200px) {
+@media (max-width: 1200px) {
     .main {
         padding-right: 0px!important;
     }
@@ -13,9 +13,25 @@
         justify-content: space-between;
         gap: 15px;
     }
-} */
+}   
 
 @media (max-width: 768px) {
+    .main {
+        padding-right: 0px!important;
+    }
+    .aside {
+        flex: 0 0 100%;
+        max-width: 100%;
+        justify-content: space-between;
+    }
+    .aside-sticky {
+        flex-wrap: nowrap;
+    }
+    .weather-now-uv, .weather-now-holiday {
+        flex-basis: 49%;
+        margin-bottom: 15px;
+    }
+
     .menu {
         margin-left: -15px;
         margin-right: -15px;
@@ -52,19 +68,6 @@
     .ws-details-item {
         margin-bottom: 10px;
     }
-    .main {
-        padding-right: 0px!important;
-    }
-    .aside {
-        flex: 0 0 100%;
-        max-width: 100%;
-        justify-content: space-between;
-    }
-    .weather-now-uv, .weather-now-holiday {
-        flex-basis: 49%;
-        margin-bottom: 15px;
-    }
-
     .forecast-menu {
         flex-wrap: wrap;
 
@@ -132,6 +135,15 @@
     }
 }
 
+@media (max-width: 615px) {
+    .aside-sticky {
+        flex-wrap: wrap;
+    }
+    .weather-now-uv, .weather-now-holiday {
+        flex-basis: 100%;
+        margin-bottom: 15px;
+    }
+}
 
 @media (max-width: 576px) {
     .burger-group {
