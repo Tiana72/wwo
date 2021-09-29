@@ -1891,13 +1891,94 @@ h3.three-day {
     background: #F8F8F8;
     border-radius: 5px;
     height: 220px;
+    padding: 20px 22px 15px;
+    font-size: 14px;
+    line-height: 19px;
+    color: #222222;
+}
+.day-card span {
+    color: #919191;
 }
 .today {
     width: 470px;
 }
+.today-now {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #E5E5E5;
+}
+.today-forecast {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 21px;
+}
+.today-forecast-icon {
+    display: flex;
+    align-items: center;
+}
+.today-forecast-icon img {
+    width: 40px;
+    margin-right: 18px;
+}
+.today-temp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+.today-temp-number {
+    font-weight: 300;
+    font-size: 79px;
+    line-height: 79px;
+    letter-spacing: -0.06em;
+    color: #222222;
+}
 .next-day {
     width: 320px;
+    padding: 20px 16px 15px;
 }
+.next-day-date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.next-day-date-text {
+    font-size: 14px;
+    line-height: 19px;
+    color: #222222;
+}
+.next-day-date-text span {
+    font-size: 12px;
+    line-height: 16px;
+    display: block;
+}
+.next-day-date-temp {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: -0.06em;
+}
+.next-day-date-temp span {
+    color: #919191;
+}
+.next-day-icon {
+    display: flex;
+    align-items: center;
+    margin-top: 17px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #E5E5E5;
+    margin-bottom: 13px;
+}
+.next-day-icon img {
+    width: 40px;
+    margin-right: 12px;
+}
+
+
+
 .world-weather-wrapper {
     display: flex;
     flex-wrap: nowrap;
@@ -2061,4 +2142,58 @@ h3.three-day {
 }
 .holiday-item-forecast p span {
     color: #919191;
+}
+
+.sport-weather-wrapper {
+    width: 100%;
+}
+.sport-weather-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 19px;
+    color: #222222;    
+    margin-bottom: 32px;
+    width: 100%;
+}
+.sport-weather-row:first-child {
+    margin-bottom: 25px;
+    font-size: 18px;
+    line-height: 25px;
+    color: #919191;
+}
+.sport-weather-row p span {
+    display: block;
+    color: #919191;
+}
+.sport-weather-match {
+   display: flex; 
+   align-items: center;
+   width: 45%;
+}
+.sport-weather-match img {
+    margin-right: 12px;
+}
+.sport-weather-date {
+    width: 25%;
+    text-align: center;
+}
+.sport-weather-forecast {
+    display: flex; 
+
+    width: 25%;
+ }
+.sport-weather-forecast-img {
+    display: flex; 
+    align-items: center;
+    width: 42px;
+    height: 36px;
+    margin-right: 15px;
+}
+.sport-weather-forecast-img img {
+    height: 32px;
+}
+.sport-weather-forecast .weather {
+    width: 100%;
+    text-align: center;
 }

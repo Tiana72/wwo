@@ -7,7 +7,7 @@
     <title>WWO</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="css/style.css">
@@ -326,9 +326,107 @@
               <a href="" class="common-button">Full forecast</a>
             </div>
             <div class="three-days-cards">
-              <div class="day-card today"></div>
-              <div class="day-card next-day"></div>
-              <div class="day-card next-day"></div>
+              <div class="day-card today">
+                <div class="today-now">
+                  <div class="today-now-time">Now 22:54</div>
+                  <div class="today-now-temp">5° /<span> -3°</span></div>
+                </div>
+                <div class="today-forecast">
+                  <div class="today-forecast-icon">
+                    <img src="img/storm_light.svg" alt="">
+                    <p>Cloudy</p>
+                  </div>
+                  <div class="today-forecast-feels">Feels like: 3°</div>
+                </div>
+                <div class="today-temp">
+                  <div class="today-temp-number">13°</div>
+                  <div class="today-temp-forecast">
+                    <img src="img/umbrella.svg" height="22px" alt="">
+                    <p>Morning</p>
+                    <p>22°</p>
+                  </div>
+                  <div class="today-temp-forecast">
+                    <img src="img/umbrella.svg" height="22px" alt="">
+                    <p>Daytime</p>
+                    <p>22°</p>
+                  </div> 
+                  <div class="today-temp-forecast">
+                    <img src="img/umbrella.svg" height="22px" alt="">
+                    <p>Everning</p>
+                    <p>22°</p>
+                  </div>
+                  <div class="today-temp-forecast">
+                    <img src="img/umbrella.svg" height="22px" alt="">
+                    <p>Night</p>
+                    <p>22°</p>
+                  </div>
+                </div>
+              </div>
+              <div class="day-card next-day">
+                <div class="next-day-date">
+                  <div class="next-day-date-text">Saturday<span>04 April</span></div>
+                  <div class="next-day-date-temp">13° /<span> 4°</span></div>
+                </div>
+                <div class="next-day-icon">
+                  <img src="img/snow_light_patchy_night.svg" alt="">
+                  <p>Cloudy</p>
+                </div>
+                <div class="today-temp">
+                  <div class="today-temp-forecast">
+                    <img src="img/umbrella.svg" height="22px" alt="">
+                    <p>Morning</p>
+                    <p>22°</p>
+                  </div>
+                  <div class="today-temp-forecast">
+                    <img src="img/umbrella.svg" height="22px" alt="">
+                    <p>Daytime</p>
+                    <p>22°</p>
+                  </div> 
+                  <div class="today-temp-forecast">
+                    <img src="img/umbrella.svg" height="22px" alt="">
+                    <p>Everning</p>
+                    <p>22°</p>
+                  </div>
+                  <div class="today-temp-forecast">
+                    <img src="img/umbrella.svg" height="22px" alt="">
+                    <p>Night</p>
+                    <p>22°</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="day-card next-day">
+                <div class="next-day-date">
+                  <div class="next-day-date-text">Saturday<span>04 April</span></div>
+                  <div class="next-day-date-temp">13° /<span> 4°</span></div>
+                </div>
+                <div class="next-day-icon">
+                  <img src="img/rain_moderate_patchy_day.svg" alt="">
+                  <p>Cloudy</p>
+                </div>
+                <div class="today-temp">
+                  <div class="today-temp-forecast">
+                    <img src="img/umbrella.svg" height="22px" alt="">
+                    <p>Morning</p>
+                    <p>22°</p>
+                  </div>
+                  <div class="today-temp-forecast">
+                    <img src="img/umbrella.svg" height="22px" alt="">
+                    <p>Daytime</p>
+                    <p>22°</p>
+                  </div> 
+                  <div class="today-temp-forecast">
+                    <img src="img/umbrella.svg" height="22px" alt="">
+                    <p>Everning</p>
+                    <p>22°</p>
+                  </div>
+                  <div class="today-temp-forecast">
+                    <img src="img/umbrella.svg" height="22px" alt="">
+                    <p>Night</p>
+                    <p>22°</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
           </div>
@@ -402,24 +500,69 @@
         <div class="col main">
           <div class="box">
             <h4 class="box-header">Sports weather</h4>
-            <div class="sport-weather-wrapper">
-              <div class="sport-weather-header">
-                <p>Tournament/Match</p>
-                <p>Start Date/Time</p>
-                <p>Weather</p>
-              </div>
-              <div class="sport-weather-row">
-                <div class="sport-weather-match">
+            <table class="sport-weather-wrapper">
+              <tr class="sport-weather-row">
+                <td class="sport-weather-match">Tournament/Match</td>
+                <td class="sport-weather-date">Start Date/Time</td>
+                <td class="sport-weather-forecast"><div class="weather">Weather</div></td>
+              </tr>
+              <tr class="sport-weather-row">
+                <td class="sport-weather-match">
                   <img src="img/football.svg" alt="">
-                  <div class="sport-weather-match-text">
-                    <p>Peruvian Primera Profesional:</p>
-                    <p>Alianza Lima vs Deportivo Llacuabamba</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+                  <p>Peruvian Primera Profesional:<span>Alianza Lima vs Deportivo Llacuabamba</span></p>
+                </td>
+                <td class="sport-weather-date">
+                  <p>12 May<span>8:00 pm</span></p>
+                </td>
+                <td class="sport-weather-forecast">
+                  <div class="sport-weather-forecast-img"><img src="img/sun-cloud.svg" alt=""></div>
+                  <p>17°<span>Partly cloudy</span></p>
+                </td>
+              </tr>
 
+              <tr class="sport-weather-row">
+                <td class="sport-weather-match">
+                  <img src="img/football.svg" alt="">
+                  <p>Peruvian Primera Profesional:<span>Melgar vs Ayacucho FC</span></p>
+                </td>
+                <td class="sport-weather-date">
+                  <p>12 September<span>11:00 pm</span></p>
+                </td>
+                <td class="sport-weather-forecast">
+                  <div class="sport-weather-forecast-img"><img src="img/umbrella.svg" alt=""></div>
+                  <p>17°<span>Partly cloudy</span></p>
+                </td>
+              </tr>
 
+              <tr class="sport-weather-row">
+                <td class="sport-weather-match">
+                  <img src="img/football.svg" alt="">
+                  <p>Peruvian Primera Profesional:<span>Melgar vs Ayacucho FC</span></p>
+                </td>
+                <td class="sport-weather-date">
+                  <p>12 September<span>11:00 pm</span></p>
+                </td>
+                <td class="sport-weather-forecast">
+                  <div class="sport-weather-forecast-img"><img src="img/sun.svg" alt=""></div>
+                  <p>17°<span>Partly cloudy</span></p>
+                </td>
+              </tr>
+
+              <tr class="sport-weather-row">
+                <td class="sport-weather-match">
+                  <img src="img/football.svg" alt="">
+                  <p>Peruvian Primera Profesional:<span>Melgar vs Ayacucho FC</span></p>
+                </td>
+                <td class="sport-weather-date">
+                  <p>12 September<span>11:00 pm</span></p>
+                </td>
+                <td class="sport-weather-forecast">
+                  <div class="sport-weather-forecast-img"><img src="img/rain-thunder.svg" alt=""></div>
+                  <p>17°<span>Patchy light rain with thunder</span></p>
+                </td>
+              </tr>
+
+            </table>
             <a href="" class="common-button">See more</a>
           </div>
         </div>
