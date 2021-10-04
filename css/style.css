@@ -386,8 +386,11 @@ nav.navbar .dropdown:hover > .city-weather {
     font-size: 24px;
     line-height: 33px;
     color: #353A3E;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(34,34,34,.1);
+
+}
+.head-alert {
+    display: flex;
+    align-items: baseline;
 }
 .weather-summary {
     display: flex;
@@ -612,7 +615,9 @@ nav.navbar .dropdown:hover > .city-weather {
     padding: 6px 10px 7px;
     color: #FFFFFF;
     font-size: 14px;
-    line-height: 19px;
+    line-height: 24px;
+    margin-left: 20px;
+    border-radius: 2px;
 }
 .forecast-menu-item-alert:hover {
     color: #FFFFFF;
@@ -700,6 +705,9 @@ a.current .day{
     padding-left: 7px;
     padding-right: 7px;
     margin-left: 3px;
+}
+a.current.forecast-link {
+    background-color: #EEEEEE;
 }
 .forecast-card-item span {
     display: block;
@@ -1886,6 +1894,9 @@ h3.three-day {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 .day-card {
     background: #F8F8F8;
@@ -1895,6 +1906,9 @@ h3.three-day {
     font-size: 14px;
     line-height: 19px;
     color: #222222;
+}
+.day-card.today-responsive {
+    display: none;
 }
 .day-card span {
     color: #919191;
@@ -1935,6 +1949,9 @@ h3.three-day {
     line-height: 79px;
     letter-spacing: -0.06em;
     color: #222222;
+}
+.today-temp-forecast {
+    width: 65px;
 }
 .next-day {
     width: 320px;

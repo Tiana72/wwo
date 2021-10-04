@@ -13,7 +13,11 @@
         justify-content: space-between;
         gap: 15px;
     }
-}   
+}  
+
+@media (max-width: 1000px) {
+
+}
 
 @media (max-width: 768px) {
     .main {
@@ -43,12 +47,12 @@
         right: 35px;
     }
     .top-menu-search {
-        top: 68px;
+        top: 60px;
         right: 0;
         z-index: 20;
     }
     .search-input {
-        width: 258px !important;
+        width: 100% !important;
     }
     .logo-header {
         width: 70px;
@@ -72,9 +76,9 @@
         flex-wrap: wrap;
 
     }
-    .forecast-menu-item-alert {
+/*     .forecast-menu-item-alert {
         display: none;
-    }
+    } */
     .forecast-menu-item-alert-aside {
         display: block;
         position: absolute;
@@ -155,7 +159,7 @@
         z-index: 20;
     }
     .search-input {
-        width: 290px !important;
+        width: 100% !important;
     }
     .breadcrumbs-box {
         margin-top: 50px;
@@ -217,10 +221,10 @@
     .forecast-menu-item-alert-aside {
         display: none;
     }
-    .forecast-menu-item-alert {
+/*     .forecast-menu-item-alert {
         display: block;
         order: 1;
-    }
+    } */
     .forecast-menu-item {
         min-width: 69px;
         min-height: 32px;
@@ -432,6 +436,23 @@
     }
     .footer-aside-content-2 {
         flex-basis: 50%;
+    }
+
+    .three-days-cards {
+        flex-wrap: wrap;
+    }
+    .day-card.next-day {
+        width: 100%;
+    }
+    .day-card.today {
+        display: none;
+    }
+    .day-card.today-responsive {
+        display: block;
+        width: 100%;
+    }
+    .today-temp-forecast {
+        width: auto;
     }
 }
 
