@@ -2000,7 +2000,7 @@ h3.three-day {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    gap: 41px;
+    gap: 3%;
 }
 .world-weather-cards {
     display: flex;
@@ -2031,17 +2031,15 @@ h3.three-day {
 }
 .world-weather-map {
     text-align: center;
-   
+    margin: 0 auto;
+    min-width: 392px;
+    border-radius: 5px;
+}
+.map {
+    width: 100%;
+    margin-bottom: 25px;
 }
 .world-weather-map-item {
-    width: 392px;
-    height: 220px;
-    background: #F8F8F8;
-    border-radius: 5px;
-    margin-bottom: 25px;
-    background-image: url(../img/map.png);
-    background-repeat: no-repeat;
-    background-position: center;
     position: relative;
 }
 .play-map {
@@ -2050,7 +2048,7 @@ h3.three-day {
     height: 44px;
     width: 44px; 
     left: calc((100% - 44px) / 2);
-    top: calc((100% - 44px) / 2);
+    top: calc((100% - 66px) / 2);
 
 }
 
@@ -2082,7 +2080,7 @@ h3.three-day {
     margin-bottom: 3px;
 }
 .api-block {
-    flex-basis: 33%;
+    min-width: 210px;
     display: flex;
     align-items: center;
     margin-bottom: 30px;
@@ -2095,6 +2093,14 @@ h3.three-day {
 }
 .api-img {
     margin-right: 12px;
+}
+.api-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.api-buttons a {
+    margin-bottom: 10px;
 }
 .box-text a {
     color: #0645AD;
@@ -2167,6 +2173,7 @@ h3.three-day {
 .sport-weather-row {
     display: flex;
     justify-content: space-between;
+    align-items: start;
     font-size: 14px;
     line-height: 19px;
     color: #222222;    

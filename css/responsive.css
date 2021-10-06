@@ -13,6 +13,9 @@
         justify-content: space-between;
         gap: 15px;
     }
+    .world-weather-wrapper {
+        flex-wrap: wrap;
+    }
 }  
 
 @media (max-width: 1000px) {
@@ -454,8 +457,51 @@
     .today-temp-forecast {
         width: auto;
     }
+    .world-weather-cards {
+        display: none;
+    }
+    .sport-weather-row {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .sport-weather-row:first-child {
+        display: none;
+    }
+    .sport-weather-match {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: start; 
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+    .sport-weather-match img {
+        margin-bottom: 12px;
+    }
+    .sport-weather-date {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 15px;
+    }
+    .sport-weather-forecast {
+        width: auto;
+    }
+    .top-dest {
+        height: 370px;
+    }
 }
 
+@media (max-width: 470px) {
+    .world-weather-map {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 320px) {
+    .top-dest {
+        height: auto;
+    }
+}
 
 @media (max-width: 320px) {
     ul.top-menu {
