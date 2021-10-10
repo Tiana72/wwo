@@ -75,7 +75,7 @@
     .ws-details-item {
         margin-bottom: 10px;
     }
-    .forecast-menu {
+    .forecast-menu, .forecast-menu-wrapper {
         flex-wrap: wrap;
 
     }
@@ -139,6 +139,26 @@
     }
     .footer-aside-content {
         flex-wrap: wrap;
+    }
+    .oops-img {
+        max-width: 200px;
+        margin-right: 40px;
+    }
+    .oops-text p {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .oops-text p.oops-text__header {
+        font-size: 32px;
+        line-height: 44px;
+    } 
+    .oops-text a {
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 18px;
+    }
+    .oops-text a img {
+        width: 25px;
     }
 }
 
@@ -494,6 +514,29 @@
 @media (max-width: 470px) {
     .world-weather-map {
         min-width: 100%;
+    }
+    .modal-alert__issues {
+        max-height: fit-content;
+    }
+    .oops-img {
+        max-width: 100px;
+        margin-right: 20px;
+    }
+    .oops-text p {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .oops-text p.oops-text__header {
+        font-size: 24px;
+        line-height: 28px;
+    } 
+    .oops-text a {
+        font-size: 12px;
+        line-height: 16px;
+        margin-top: 14px;
+    }
+    .oops-text a img {
+        width: 20px;
     }
 }
 

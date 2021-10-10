@@ -327,7 +327,57 @@
           <div class="box weather-now-city">
             <div class="head-alert">
               <h3 class="head2"> Manchester weather now</h3>
-              <a href="" class="forecast-menu-item-alert">Weather alerts!</a>
+
+              <button id="alert" class="forecast-menu-item-alert">Weather alerts!</button>
+              <!-- Alert Modal -->
+              <div class="modal-alert">
+                <div class="modal-alert__content">
+                  <button class="modal-alert__close-button"><img src="./img/close.svg" width="12" alt=""></button>
+                  <div class="modal-alert__places">
+                    <button class="orange">Kings (Brooklyn)</button>
+                    <button class="red">Washington</button>
+                  </div>
+                  <h5 class="modal-alert__header">Alert for Kings (Brooklyn); Southeast Suffolk; Southern Nassau; Southern Queens; Southwest Suffolk (New York) Issued by the National Weather Service</h5>
+                  <div class="modal-alert__issues">
+                    <div class="modal-alert__issues-item">
+                      <p>Effective:
+                        <span>2021-09-28T05:35:00-04:00</span></p>
+                    </div>
+                    <div class="modal-alert__issues-item">
+                      <p>Certainty:
+                        <span class="red-text">Likely</span></p>
+                    </div>
+                    <div class="modal-alert__issues-item">
+                      <p>Event:
+                        <span>Rip Current Statement</span></p>
+                    </div>
+                    <div class="modal-alert__issues-item">
+                      <p>Urgency:
+                        <span class="red-text">Expected</span></p>
+                    </div>
+                    <div class="modal-alert__issues-item">
+                      <p>Expires:
+                        <span>2021-09-28T21:00:00-04:00</span></p>
+                    </div>
+                    <div class="modal-alert__issues-item">
+                      <p>Type:
+                        <span>Alert</span></p>
+                    </div>
+                    <div class="modal-alert__issues-item">
+                      <p>Severity:
+                        <span class="orange-block">Moderate</span></p>
+                    </div>
+                  </div>
+                  <div class="modal-alert__desc">
+                    <p class="modal-alert__desc-header">Areas:</p>
+                    <p>Kings (Brooklyn); Southeast Suffolk; Southern Nassau; Southern Queens; Southwest Suffolk
+                      ...HIGH RIP CURRENT RISK REMAINS IN EFFECT THROUGH THIS EVENING... * WHAT...Dangerous rip currents. * WHERE...Southern Nassau, Southern Queens, Kings (Brooklyn), Southeast Suffolk and Southwest Suffolk Counties. * WHEN...Through this evening. * IMPACTS...Life-threatening rip currents are likely for all people entering the surf zone. Anyone visiting the beaches should stay out of the surf. Rip currents can sweep even the best swimmers away from shore into deeper water.
+                      </p> 
+                      <p>Instruction: If you enter the surf zone, always have a flotation device with you and swim near a lifeguard. If caught in a rip current, relax and float, and do not swim against the current. If able, swim in a direction following the shoreline. If unable to escape, face the shore and yell or wave for help.</p>
+                  </div>
+                </div>
+              </div>
+
             </div>
             <hr class="weather-summary-hr">
             <div class="weather-summary">
@@ -1497,7 +1547,9 @@
   <script src="https://code.highcharts.com/modules/exporting.js"></script>
   <script src="https://code.highcharts.com/modules/export-data.js"></script>
   <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-
+  <script src="js/wwo-charts.js"></script>
+  
   <script src="js/wwo.js"></script>
+
 </body>
 </html>
