@@ -241,7 +241,26 @@ $(document).ready(function(){
 /////////////////////////////////////////////////////////////
 
 
+//////////////////////////////////////////////////////
+//              Settings Modal                      //
+//////////////////////////////////////////////////////
 
+$(function () {
+  $('#settings').click(function () {
+    $('.modal-settings').addClass('modal-settings_active');
+  });
+ 
+  $('.modal-settings__close-button').click(function () {
+    $('.modal-settings').removeClass('modal-settings_active');
+  });
+});
+
+$('.modal-settings').mouseup(function (e) {
+  let modalContent = $(".modal-settings__content");
+  if (!modalContent.is(e.target) && modalContent.has(e.target).length === 0) {
+    $(this).removeClass('modal-settings_active');
+  }
+});
 
 
 
@@ -251,7 +270,6 @@ $(document).ready(function(){
 
 $(function () {
   $('#alert').click(function () {
-    console.log('Клик!');
     $('.modal-alert').addClass('modal-alert_active');
   });
  
@@ -260,7 +278,6 @@ $(function () {
   });
 });
 
-// Закрытие модального окна при клике вне его контентной области
 $('.modal-alert').mouseup(function (e) {
   let modalContent = $(".modal-alert__content");
   if (!modalContent.is(e.target) && modalContent.has(e.target).length === 0) {
