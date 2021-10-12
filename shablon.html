@@ -27,7 +27,7 @@
               <img class="burger" src="img/burger.svg" alt="">
             </button>   
             <!-- Top Menu -->
-            <div class="navbar-collapse collapse" id="top-menu" style="">
+            <div class="navbar-collapse collapse" id="top-menu">
               <ul class="navbar-nav mr-auto top-menu">
                 <li class="nav-item top-menu-item">
                   <a class="nav-link top-menu-link" href="index.html">Weather</a>
@@ -63,13 +63,13 @@
             </div>
           </nav>
               <!-- Settings modal -->
-              <button type="button" class="btn btn-settings" data-toggle="modal" data-target="#settings">
+              <button id="settings" type="button" class="btn btn-settings">
                 <img class="settings" src="img/sett-c-white.svg" alt="">
               </button>
-              <div class="modal fade" id="settings" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-body settings-body">
+              <div class="modal-settings">
+                <div class="modal-settings__content">
+                  <button class="modal-settings__close-button"><img src="./img/close.svg" width="12" alt=""></button>
+
                       <div class="settings-body-item">
                         <p class="sett">Temperature</p>
                         <div class="btn-group" role="group" aria-label="sett-temp">
@@ -87,10 +87,10 @@
                       </div>
                       <div class="settings-body-item">
                         <p class="sett">Language</p>
-                        <select class="btn btn-secondary sett-btn">
-                          <option data-content='<span class=""></span> ENG'>ENG</option>
-                          <option data-content='<span class=""></span> RU'>RU</option>
-                          <option data-content='<span class=""></span> BY'>BY</option>
+                        <select class="btn btn-secondary sett-btn sett-btn__language">
+                          <option class="sett-btn__option">ENG</option>
+                          <option class="sett-btn__option">RU</option>
+                          <option class="sett-btn__option">BY</option>
                         </select>
                       </div>
                       <div class="settings-body-item">
@@ -107,11 +107,11 @@
                           <button type="button" class="btn btn-primary sett-btn sett-btn-primary">MM</button>
                         </div>
                       </div>
-                    </div>
-                  </div>
+
                 </div>
               </div>
               <!-- Settings modal end -->
+
           <form class="form-inline my-2 my-md-0 top-menu-search" action="http://google.com/search" target="_blank">
             <input name="search" class="form-control search-input" type="search" autocomplete="on" placeholder="Search">
           </form>
@@ -289,8 +289,6 @@
         </div>
       </div>
     </div>
-
-
 
     <div class="container w1170">
       <div class="row no-gutters">

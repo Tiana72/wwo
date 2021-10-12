@@ -27,7 +27,7 @@
               <img class="burger" src="img/burger.svg" alt="">
             </button>   
             <!-- Top Menu -->
-            <div class="navbar-collapse collapse" id="top-menu" style="">
+            <div class="navbar-collapse collapse" id="top-menu">
               <ul class="navbar-nav mr-auto top-menu">
                 <li class="nav-item top-menu-item">
                   <a class="nav-link top-menu-link" href="index.html">Weather</a>
@@ -63,13 +63,13 @@
             </div>
           </nav>
               <!-- Settings modal -->
-              <button type="button" class="btn btn-settings" data-toggle="modal" data-target="#settings">
+              <button id="settings" type="button" class="btn btn-settings">
                 <img class="settings" src="img/sett-c-white.svg" alt="">
               </button>
-              <div class="modal fade" id="settings" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-body settings-body">
+              <div class="modal-settings">
+                <div class="modal-settings__content">
+                  <button class="modal-settings__close-button"><img src="./img/close.svg" width="12" alt=""></button>
+
                       <div class="settings-body-item">
                         <p class="sett">Temperature</p>
                         <div class="btn-group" role="group" aria-label="sett-temp">
@@ -87,10 +87,10 @@
                       </div>
                       <div class="settings-body-item">
                         <p class="sett">Language</p>
-                        <select class="btn btn-secondary sett-btn">
-                          <option data-content='<span class=""></span> ENG'>ENG</option>
-                          <option data-content='<span class=""></span> RU'>RU</option>
-                          <option data-content='<span class=""></span> BY'>BY</option>
+                        <select class="btn btn-secondary sett-btn sett-btn__language">
+                          <option class="sett-btn__option">ENG</option>
+                          <option class="sett-btn__option">RU</option>
+                          <option class="sett-btn__option">BY</option>
                         </select>
                       </div>
                       <div class="settings-body-item">
@@ -107,11 +107,11 @@
                           <button type="button" class="btn btn-primary sett-btn sett-btn-primary">MM</button>
                         </div>
                       </div>
-                    </div>
-                  </div>
+
                 </div>
               </div>
               <!-- Settings modal end -->
+
           <form class="form-inline my-2 my-md-0 top-menu-search" action="http://google.com/search" target="_blank">
             <input name="search" class="form-control search-input" type="search" autocomplete="on" placeholder="Search">
           </form>
@@ -290,8 +290,6 @@
       </div>
     </div>
 
-
-
     <div class="container w1170">
       <div class="row no-gutters">
         <div class="col">
@@ -319,16 +317,65 @@
     <div class="container w1170">
       <div class="row no-gutters">
         <div class="col main">
-          <div class="box">
+          <div class="box days-box">
             <div class="forecast-menu">
               <a href="index.html" class="forecast-menu-item">10 days weather</a>
               <a href="hourly.html" class="forecast-menu-item">Hourly weather</a>
               <a href="history.html" class="forecast-menu-item">History</a>
               <a href="days.html" class="forecast-menu-item">Days</a>
               <a href="averages.html" class="forecast-menu-item forecast-menu-item-active">Averages</a>
-              <a href="" class="forecast-menu-item forecast-menu-item-alert">Weather alerts!</a>
-              <a href="" class="forecast-menu-item forecast-menu-item-alert-aside">Weather alerts!</a>
+              <button id="alert" class="forecast-menu-item-alert">Weather alerts!</button>
+              <!-- <a href="" class="forecast-menu-item forecast-menu-item-alert-aside">Weather alerts!</a> -->
               <a href="https://map.worldweatheronline.com/" target="_blank" class="forecast-menu-item">Weather maps <img src="img/maps-logo.png" width="15" height="17" alt=""></a>
+            </div>
+            
+            <!-- Alert Modal -->
+            <div class="modal-alert">
+              <div class="modal-alert__content">
+                <button class="modal-alert__close-button"><img src="./img/close.svg" width="12" alt=""></button>
+                <div class="modal-alert__places">
+                  <button class="orange">Kings (Brooklyn)</button>
+                  <button class="red">Washington</button>
+                </div>
+                <h5 class="modal-alert__header">Alert for Kings (Brooklyn); Southeast Suffolk; Southern Nassau; Southern Queens; Southwest Suffolk (New York) Issued by the National Weather Service</h5>
+                <div class="modal-alert__issues">
+                  <div class="modal-alert__issues-item">
+                    <p>Effective:
+                      <span>2021-09-28T05:35:00-04:00</span></p>
+                  </div>
+                  <div class="modal-alert__issues-item">
+                    <p>Certainty:
+                      <span class="red-text">Likely</span></p>
+                  </div>
+                  <div class="modal-alert__issues-item">
+                    <p>Event:
+                      <span>Rip Current Statement</span></p>
+                  </div>
+                  <div class="modal-alert__issues-item">
+                    <p>Urgency:
+                      <span class="red-text">Expected</span></p>
+                  </div>
+                  <div class="modal-alert__issues-item">
+                    <p>Expires:
+                      <span>2021-09-28T21:00:00-04:00</span></p>
+                  </div>
+                  <div class="modal-alert__issues-item">
+                    <p>Type:
+                      <span>Alert</span></p>
+                  </div>
+                  <div class="modal-alert__issues-item">
+                    <p>Severity:
+                      <span class="orange-block">Moderate</span></p>
+                  </div>
+                </div>
+                <div class="modal-alert__desc">
+                  <p class="modal-alert__desc-header">Areas:</p>
+                  <p>Kings (Brooklyn); Southeast Suffolk; Southern Nassau; Southern Queens; Southwest Suffolk
+                    ...HIGH RIP CURRENT RISK REMAINS IN EFFECT THROUGH THIS EVENING... * WHAT...Dangerous rip currents. * WHERE...Southern Nassau, Southern Queens, Kings (Brooklyn), Southeast Suffolk and Southwest Suffolk Counties. * WHEN...Through this evening. * IMPACTS...Life-threatening rip currents are likely for all people entering the surf zone. Anyone visiting the beaches should stay out of the surf. Rip currents can sweep even the best swimmers away from shore into deeper water.
+                    </p> 
+                    <p>Instruction: If you enter the surf zone, always have a flotation device with you and swim near a lifeguard. If caught in a rip current, relax and float, and do not swim against the current. If able, swim in a direction following the shoreline. If unable to escape, face the shore and yell or wave for help.</p>
+                </div>
+              </div>
             </div>
 
             <div class="city-hourly-weather">
@@ -338,31 +385,27 @@
 
               <h3 class="days-header">Averages</h3>
               <p>Following fields are displayed for Minsk Monthly Yearly averages:</p>
-              <div>
-                <div>
-                  <ul>
-                    <li>Max, Min and Average Temperature(&deg;C/&deg;F)</li>
-                    <li>Visibility (km or miles)</li>
-                    <li>Pressure (mb or inches)</li>
-                    <li>Cloud (%)</li>
-                    <li>Humidity (%)</li>
-                    <li>Max and Avg Wind Speed (km/h, mph, knots or m/s)</li>
-                    <li>Avg Wind Gust (km/h, mph, knots or m/s)</li>
-                    <li>Fog Days</li>
-                  </ul>
-                </div>
-                <div>
-                  <ul>
-                    <li>Snow Days</li>
-                    <li>Rain Days</li>
-                    <li>Thunder Days</li>
-                    <li>Sunny Days</li>
-                    <li>Sun hour</li>
-                    <li>Snow amount (cm)</li>
-                    <li>Rain amount (mm or inches)</li>
-                    <li>UV Index</li>
-                  </ul>
-                </div>
+              <div class="averages-fields">
+                <ul>
+                  <li>Max, Min and Average Temperature(&deg;C/&deg;F)</li>
+                  <li>Visibility (km or miles)</li>
+                  <li>Pressure (mb or inches)</li>
+                  <li>Cloud (%)</li>
+                  <li>Humidity (%)</li>
+                  <li>Max and Avg Wind Speed (km/h, mph, knots or m/s)</li>
+                  <li>Avg Wind Gust (km/h, mph, knots or m/s)</li>
+                  <li>Fog Days</li>
+                </ul>
+                <ul>
+                  <li>Snow Days</li>
+                  <li>Rain Days</li>
+                  <li>Thunder Days</li>
+                  <li>Sunny Days</li>
+                  <li>Sun hour</li>
+                  <li>Snow amount (cm)</li>
+                  <li>Rain amount (mm or inches)</li>
+                  <li>UV Index</li>
+                </ul>
               </div>
             </div>
           </div>
